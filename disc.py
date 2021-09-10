@@ -3,6 +3,7 @@ import discord.ext.commands
 import asyncio
 import tracemalloc
 tracemalloc.start()
+import os
 
 import requests
 import json
@@ -10,7 +11,7 @@ import json
 import csv
 
 
-token="ODY2OTc4MDU5MTc3ODIwMTkw.YPaaPA.rvyWBjA6_SCjchjrivhs-REIPfI"
+token=os.getenv('DISCORD_TOKEN')
 
 cl=discord.client.Client()
 
@@ -28,7 +29,7 @@ async def on_ready():
 
 @cl.event
 async def role_update():
-	m={'Accept':'application/json','authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjQwMzYzZmJjLTA2YTEtNGNiYS1iYzkxLTQzYzViMjZkYjhjMyIsImlhdCI6MTYzMTAwMDYzMiwic3ViIjoiZGV2ZWxvcGVyLzY2NWM2MDI3LTFlOTctYjczMC1lYWQ1LTlmYWE0NDgyYTY4ZiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiMTcxLjc2LjMyLjU5Il0sInR5cGUiOiJjbGllbnQifV19.AuvO2ZPV7W-5c30Kmzczo75RuV_VER2wwxUXm5Rn2DTVm23fqkBVNi0DxB34XFS3OZiXCN8lUnSUQes13XwNDg'}
+	m={'Accept':'application/json','authorization':'Bearer m20'}
 
 	b=requests.get(r'https://api.brawlstars.com/v1/clubs/%23202U9UPLU/members',headers=m) # %23 - js '#'
 
@@ -54,7 +55,7 @@ async def club_entry():
 	mo={}
 	while 0:
 		
-		m={'Accept':'application/json','authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjQwMzYzZmJjLTA2YTEtNGNiYS1iYzkxLTQzYzViMjZkYjhjMyIsImlhdCI6MTYzMTAwMDYzMiwic3ViIjoiZGV2ZWxvcGVyLzY2NWM2MDI3LTFlOTctYjczMC1lYWQ1LTlmYWE0NDgyYTY4ZiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiMTcxLjc2LjMyLjU5Il0sInR5cGUiOiJjbGllbnQifV19.AuvO2ZPV7W-5c30Kmzczo75RuV_VER2wwxUXm5Rn2DTVm23fqkBVNi0DxB34XFS3OZiXCN8lUnSUQes13XwNDg'}
+		m={'Accept':'application/json','authorization':'Bearer m20'}
 
 		b=requests.get(r'https://api.brawlstars.com/v1/clubs/%23202U9UPLU/members',headers=m) # %23 - js '#'
 
