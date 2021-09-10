@@ -33,3 +33,4 @@ def retr_entry(**data):
 			if data['bs_tag']==i[1]:
 				return i[0]
 	
+add_entry('150004993827263','9283746')

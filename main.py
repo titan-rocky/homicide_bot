@@ -47,7 +47,7 @@ async def on_message(message):
 	if message.content.startswith('$addid'):
 		print(f'$addid requested by {message.author.name}#{message.author.discriminator} id {message.author.id}')
 		if message.author.id in op_discord_id:
-			b=message.content
+			b=message.content()
 			b=b.lstrip('$addid ').strip()
 			print(b)
 			if len(b)>2:
