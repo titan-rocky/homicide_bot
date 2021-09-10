@@ -60,7 +60,7 @@ async def on_message(message):
 					return m.content=='confirm' and m.channel==message.channel
 
 				try:
-					msg=cl.wait_for('message',check=check,timeout=30)
+					msg=await cl.wait_for('message',check=check,timeout=30)
 				except asyncio.TimeoutError:
 					await message.channel.send(f'{message.author.mention} Your Request has been declined')
 				else:

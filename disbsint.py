@@ -4,7 +4,7 @@ def add_entry(dis_id,bs_tag):
 	file=open('disbs.csv','a',newline='')
 	print('disbs.csv opened')
 	wr=csv.writer(file)
-	wr.writerows([dis_id,bs_tag],)
+	wr.writerow([dis_id,bs_tag])
 	file.close()
 	print('disbs.csv closed')
 
