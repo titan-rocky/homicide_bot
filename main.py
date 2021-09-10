@@ -50,7 +50,6 @@ def header():
 async def role_update():
 	b=requests.get(r'https://api.brawlstars.com/v1/clubs/%23202U9UPLU/members',headers=header()) # %23 - js '#
 	dic=b.json()
-	print(dic)
 	if 'reason' in dic and dic['reason']=='accessDenied.invalidIp':
 		 print('Access Denied , Invalid IP')
 	else:
