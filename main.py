@@ -30,8 +30,14 @@ async def on_ready():
 
 @cl.event
 async def on_message(message):
+
 	if message.content.startswith('$hi'):
-		await message.channel.send('Hello m`boss')
+		if message.author.id=='557914347490508806':
+			await message.channel.send('Hello m\'Boss')
+		elif message.author.id=='7386528323409019396':
+			await message.channel.send('Hello Guardian')
+		else:
+			await message.channel.send(f'Hello ,{message.author.name} ')
 
 def header():
 	bs_APIKEY=os.environ['BRAWL_API_KEY']
