@@ -2,6 +2,7 @@ import csv
 
 def add_entry(dis_id,bs_tag):
 	file=open('disbs.csv','a',newline='')
+  print('file opened')
 	wr=csv.writer(file)
 	wr.writerow([dis_id,bs_tag])
 	file.close()
@@ -20,10 +21,10 @@ def retr_entry(**data):
 	file.close()
 	if 'dis_id' in data:
 		for i in range(len(b)):
-			if dis_id==i[0]:
+			if data['dis_id']==i[0]:
 				return i[1]
 	if 'bs_tag' in data:
 		for i in range(len(b)):
-			if bs_tag==i[1]:
+			if data['bs_tag']==i[1]:
 				return i[0]
 	
