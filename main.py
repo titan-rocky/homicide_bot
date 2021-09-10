@@ -12,6 +12,9 @@ import csv
 from alive import keep_alive
 
 
+op_discord_id=['557914347490508806','709740580988780624']
+
+
 print((os.environ['DISCORD_TOKEN']))
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
@@ -37,8 +40,36 @@ async def on_message(message):
 			await message.channel.send('Hello m\'Boss')
 		elif str(message.author.id)=='7386528323409019396':
 			await message.channel.send('Hello Guardian')
+		elif str(message.author.id)=='709740580988780624':
+			await message.channel.send('Hello Guardian')	
 		else:
 			await message.channel.send(f'Hello ,{message.author.name} ')
+
+	if message.content.startswith('$addid'):
+		if message.author.id in op_discord_id:
+			b=message.content
+			b=b.lstrip('$addid ').strip()
+			if len(b)>2:
+				await message.channel.send(f'{message.author.mention} , you can add only one entry')
+			elif len(b)!=2:
+				await message.channel.send(f'{message.author.mention} , Please give any entry')
+			elif len(b)==2:
+
+				def check(m):
+					return m.content='confirm' and m.channel=message.channel
+
+				try:
+					msg=cl.wait_for('message',check=check,timeout=30)
+				except asyncio.TimeoutError:
+					await message.channel.send(f'{message.author.mention} Your Request has been declined')
+				else:
+					disbsint.add_entry(b[0],b[1])
+
+
+
+
+
+
 
 def header():
 	bs_APIKEY=os.environ['BRAWL_API_KEY']
