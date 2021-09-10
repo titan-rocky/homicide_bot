@@ -30,7 +30,8 @@ async def on_ready():
 
 @cl.event
 async def on_message(message):
-	if message.startswith('$')
+	if message.startswith('$hi'):
+		await message.channel.send('Hello m`boss')
 
 def header():
 	bs_APIKEY=os.environ['BRAWL_API_KEY']
