@@ -1,0 +1,738 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cal",
+				"calendarobj"
+			],
+			[
+				"cale",
+				"calenframe"
+			],
+			[
+				"calena",
+				"calendetails"
+			],
+			[
+				"highlight",
+				"highlightbackground"
+			],
+			[
+				"m",
+				"m"
+			],
+			[
+				"attend",
+				"attendence"
+			],
+			[
+				"att",
+				"atte"
+			],
+			[
+				"Tk",
+				"Tk"
+			],
+			[
+				"welc",
+				"welc_button_font"
+			],
+			[
+				"l",
+				"l"
+			],
+			[
+				"win",
+				"window"
+			],
+			[
+				"prove",
+				"proverbfile"
+			],
+			[
+				"quer",
+				"query2result"
+			],
+			[
+				"sq",
+				"sqlconnector"
+			],
+			[
+				"col",
+				"columnspan"
+			],
+			[
+				"cre",
+				"creacc_cur"
+			],
+			[
+				"on",
+				"on_login_click"
+			],
+			[
+				"check",
+				"checkread"
+			],
+			[
+				"login",
+				"loginreader"
+			],
+			[
+				"cr",
+				"creacc_cur"
+			],
+			[
+				"crea",
+				"creacc_mycon"
+			],
+			[
+				"user",
+				"cac_username"
+			],
+			[
+				"creac",
+				"creacc_bgd"
+			],
+			[
+				"cac",
+				"creacc_bgd"
+			],
+			[
+				"cac_user",
+				"cac_username"
+			],
+			[
+				"cac_bu",
+				"cac_but_actbg"
+			],
+			[
+				"be",
+				"bebas"
+			],
+			[
+				"title",
+				"titleof_font"
+			],
+			[
+				"button",
+				"button_font"
+			],
+			[
+				"en",
+				"entr_wind"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "abc.csv",
+			"settings":
+			{
+				"buffer_size": 2751,
+				"encoding": "UTF-16 LE with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "alive.py",
+			"settings":
+			{
+				"buffer_size": 298,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "csv_display.py",
+			"settings":
+			{
+				"buffer_size": 1030,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 2471,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "poetry.lock",
+			"settings":
+			{
+				"buffer_size": 33045,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "pyproject.toml",
+			"settings":
+			{
+				"buffer_size": 318,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 33,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sub",
+				"Sublimecord: Connect to Discord"
+			],
+			[
+				"subl",
+				"Sublimecord: Connect to Discord"
+			],
+			[
+				"Sub",
+				"Sublimecord: Connect to Discord"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"stop",
+			"cd",
+			"cd E:/",
+			"import login_page",
+			"print('h1')",
+			"print(hi)",
+			"subl",
+			"python login_page.py",
+			"pip",
+			"python"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/Github/homicide_bot/README.md",
+		"/E/Github/homicide_bot/pyproject.toml",
+		"/E/Github/homicide_bot/poetry.lock",
+		"/E/Github/homicide_bot/csv_display.py",
+		"/E/Github/homicide_bot/alive.py",
+		"/E/Github/homicide_bot/abc.csv",
+		"/E/Github/homicide_bot/.env",
+		"/E/Github/homicide_bot/main.py",
+		"/E/Github/homicide_bot/.replit",
+		"/E/Github/homicide_bot/cred.env",
+		"/E/Github/homicide_bot/disc.py",
+		"/E/__Projects__/Brawl Stars/csv_display.py",
+		"/E/__Projects__/Brawl Stars/alive.py",
+		"/E/__Projects__/Brawl Stars/fdh.py",
+		"/E/__Projects__/Brawl Stars/disc.py",
+		"/E/__Projects__/Brawl Stars/creds.env.gitignore",
+		"/E/__Projects__/Brawl Stars/abc.csv",
+		"/E/__Projects__/Brawl Stars/bbs.txt",
+		"/E/__Projects__/Brawl Stars/bbs.dat",
+		"/E/Github/kaipulla/Procfile",
+		"/E/Github/kaipulla/kaipulla.py",
+		"/E/Github/kaipulla/README.md",
+		"/E/Github/kaipulla/requirements.txt",
+		"/E/Python Projects/Discord Bot/Kaipulla/requirements.txt",
+		"/E/Python Projects/Discord Bot/Kaipulla/Procfile",
+		"/E/Python Projects/Discord Bot/Kaipulla/kaipulla.py",
+		"/E/Github/Teacher's Assistant.sublime-project",
+		"/E/Python Projects/XIIE/Record/13.py",
+		"/E/Python Projects/XIIE/Record/12.py",
+		"/E/Python Projects/XIIE/Record/11.py",
+		"/E/Python Projects/XIIE/Record/10.py",
+		"/E/Python Projects/XIIE/Record/9.py",
+		"/E/Python Projects/XIIE/Record/8.py",
+		"/E/Python Projects/XIIE/Record/7.py",
+		"/E/Python Projects/XIIE/Record/6.py",
+		"/E/Python Projects/XIIE/Record/5.py",
+		"/E/Python Projects/XIIE/Record/4.py",
+		"/E/Python Projects/XIIE/Record/3.py",
+		"/E/Python Projects/XIIE/Record/2.py",
+		"/E/Python Projects/XIIE/Record/1.py",
+		"/E/Github/Teacher-s-Assistant/welcome.py",
+		"/E/Github/Teacher-s-Assistant/login_page.py",
+		"/E/Github/Teacher-s-Assistant/forgotpsw.py",
+		"/E/Github/Teacher-s-Assistant/creaccnt.py",
+		"/E/Github/Teacher-s-Assistant/attendence.py",
+		"/E/Github/Teacher-s-Assistant/animation.py",
+		"/E/Github/Teacher-s-Assistant/view_atten.py",
+		"/E/Github/Teacher-s-Assistant/timetable2.py",
+		"/E/Github/Teacher-s-Assistant/timer.py",
+		"/E/Github/Teacher-s-Assistant/take_atten.py",
+		"/E/Github/Teacher-s-Assistant/newacc.py",
+		"/E/Github/Teacher-s-Assistant/.gitattributes",
+		"/E/Github/Teacher-s-Assistant/Documentation.docx",
+		"/E/Github/Teacher-s-Assistant/credentials.json",
+		"/E/Github/Teacher-s-Assistant/README.md",
+		"/E/Github/Teacher-s-Assistant/login.csv",
+		"/E/Github/Teacher-s-Assistant/intro.mp3",
+		"/E/Github/Teacher-s-Assistant/icon.ico",
+		"/E/Projects/cs/teacher's assistant/timetable2.py",
+		"/E/Projects/cs/teacher's assistant/view_atten.py",
+		"/E/Projects/cs/teacher's assistant/attendence.py",
+		"/E/Projects/cs/teacher's assistant/take_atten.py",
+		"/E/Projects/cs/teacher's assistant/welcome.py",
+		"/E/Projects/cs/teacher's assistant/forgotpsw.py",
+		"/E/Projects/cs/teacher's assistant/login_page.py",
+		"/E/Projects/cs/teacher's assistant/creaccnt.py",
+		"/E/Projects/cs/teacher's assistant/animation.py",
+		"/E/Github/Repositories/animation.py",
+		"/E/Projects/cs/teacher's assistant/view_attn.py",
+		"/E/Projects/cs/teacher's assistant/view_attendence.py",
+		"/E/Projects/cs/teacher's assistant/message_api.py",
+		"/E/Projects/cs/teacher's assistant/david.py",
+		"/E/Projects/cs/teacher's assistant/credentials.json",
+		"/E/Projects/cs/teacher's assistant/gsdgsd.py",
+		"/C/Users/Arokiasamy/Downloads/client_secret_605505392451-gjgvi632tsrd9e633an9o58a72ffvbqb.apps.googleusercontent.com.json",
+		"/C/Users/Arokiasamy/Downloads/credentials.json",
+		"/E/Projects/cs/teacher's assistant/newacc.py",
+		"/E/Projects/cs/teacher's assistant/__init__.py",
+		"/E/Projects/cs/teacher's assistant/attendwindow.py",
+		"/E/Projects/cs/teacher's assistant/checkbox.py",
+		"/E/Projects/cs/teacher's assistant/classf.py",
+		"/E/Projects/cs/teacher's assistant/icon.ico",
+		"/E/Projects/cs/teacher's assistant/intro.mp3",
+		"/E/Projects/cs/teacher's assistant/login - Copy.csv",
+		"/E/Projects/cs/teacher's assistant/login.csv",
+		"/E/Projects/cs/teacher's assistant/n tbk.py",
+		"/E/Projects/cs/teacher's assistant/proverbs.txt",
+		"/E/Projects/cs/teacher's assistant/timer.py",
+		"/E/Projects/cs/teacher's assistant/timer2.py",
+		"/E/Projects/cs/teacher's assistant/timetable.py",
+		"/E/Projects/cs/teacher's assistant/treeview.py",
+		"/E/Projects/cs/teachers_assistant/login/creaccnt.py",
+		"/E/Projects/cs/teachers_assistant/login/welcome.py",
+		"/E/Projects/cs/teachers_assistant/login/login_page.py",
+		"/E/Projects/cs/teachers_assistant/login/forgotpsw.py",
+		"/E/Projects/cs/teachers_assistant/login/attendence.py",
+		"/E/Projects/cs/teachers_assistant/login/timetable2.py",
+		"/E/Projects/cs/teachers_assistant/login/animation.py",
+		"/E/Python Projects/XIIE/stack prog.py",
+		"/E/Studies/py/files_syntax.py",
+		"/E/Projects/cs/teachers_assistant/login/timetable.py",
+		"/E/Projects/cs/teachers_assistant/login/checkbox.py",
+		"/E/Projects/cs/scrnsht/scrnsht.py",
+		"/C/Users/Arokiasamy/AppData/Roaming/Sublime Text 3/Packages/sublimecord/Sublimecord.sublime-settings",
+		"/E/Projects/cs/teachers_assistant/login/attendwindow.py",
+		"/E/Projects/cs/teachers_assistant/login/__init__.py",
+		"/E/Python Projects/Discord Bot/rainbow role/rain.py",
+		"/E/Projects/cs/teachers_assistant/login/n tbk.py",
+		"/E/Projects/cs/teachers_assistant/login/treeview.py",
+		"/E/Projects/cs/teachers_assistant/login/timer2.py",
+		"/E/Projects/cs/teachers_assistant/login/timer.py",
+		"/E/Projects/cs/teachers_assistant/login/message_api.py",
+		"/E/Projects/cs/teachers_assistant/login/gsdgsd.py",
+		"/E/Projects/cs/teachers_assistant/login/classf.py",
+		"/E/Projects/cs/teachers_assistant/login/entr_page2.py",
+		"/E/Projects/cs/teachers_assistant/login/entr_page.py",
+		"/E/Projects/cs/teachers_assistant/entrance page.py",
+		"/E/Projects/cs/teachers_assistant/login/login page final.py",
+		"/E/Projects/cs/teachers_assistant/login/newacc.py",
+		"/E/Projects/cs/teachers_assistant/login/login algorithm.py",
+		"/E/Projects/cs/teachers_assistant/ads.py",
+		"/E/Projects/cs/teachers_assistant/login page final.py"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"root",
+			"bot",
+			"dd=",
+			"kaipulla",
+			"kai",
+			"I"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"frame",
+			"can",
+			"cl",
+			"nesamani",
+			"nesa"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "abc.csv",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "alive.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "csv_display.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1030,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "poetry.lock",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "pyproject.toml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "README.md",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "club api.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"E:\\__Projects__\\Brawl Stars\\Club Api.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 160.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
