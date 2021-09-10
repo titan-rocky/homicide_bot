@@ -9,6 +9,7 @@ import requests
 import json
 
 import csv
+from alive import keep_alive
 
 
 token=os.getenv('DISCORD_TOKEN')
@@ -89,5 +90,5 @@ async def club_entry():
 
 
 
-
+keep_alive()
 cl.run(token)
