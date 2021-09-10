@@ -63,6 +63,7 @@ async def on_message(message):
 				except asyncio.TimeoutError:
 					await message.channel.send(f'{message.author.mention} Your Request has been declined')
 				else:
+					print(f'added {b[0]}:{b[1]} disbs.csv')
 					disbsint.add_entry(b[0],b[1])
 
 
