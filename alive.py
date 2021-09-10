@@ -4,13 +4,14 @@ app= Flask('')
 
 @app.route('/')
 
+def home():
+  return 'Hello i am alive'
 #def index():
 #  return render_template("index.html")
 def run():
   app.run(host='0.0.0.0', port=8080)
 
-def msg():
-  return 'Hello i am alive'
+
 
 def keep_alive():
   t=Thread(target=run)
