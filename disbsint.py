@@ -18,7 +18,7 @@ def show_entries():
 	return b
 
 def retr_entry(**data):
-	file=open('disbs.csv','a',newline='')
+	file=open('disbs.csv','r',newline='')
 	print('disbs.csv opened')
 	wr=csv.reader(file)
 	b=[i for i in wr]
