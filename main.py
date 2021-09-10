@@ -11,8 +11,7 @@ import json
 import csv
 from alive import keep_alive
 
-
-token=os.environ['DISCORD_TOKEN']
+print((os.environ['DISCORD_TOKEN']))
 bs_APIKEY=token=os.environ['BRAWL_API_KEY']
 
 cl=discord.client.Client()
@@ -92,4 +91,4 @@ async def club_entry():
 
 
 keep_alive()
-cl.run(token)
+cl.run(os.environ['DISCORD_TOKEN'])
