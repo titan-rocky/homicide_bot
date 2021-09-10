@@ -46,8 +46,8 @@ async def on_message(message):
 
 	if message.content.startswith('$addid'):
 		print(f'$addid requested by {message.author.name}#{message.author.discriminator} id {message.author.id}')
-		if message.author.id in op_discord_id:
-			b=message.content()
+		if str(message.author.id) in op_discord_id:
+			b=message.content
 			b=b.lstrip('$addid ').strip()
 			print(b)
 			if len(b)>2:
@@ -66,7 +66,8 @@ async def on_message(message):
 				else:
 					print(f'added {b[0]}:{b[1]} disbs.csv')
 					disbsint.add_entry(b[0],b[1])
-
+		else:
+			await message.channel.send('You are not Authorized 😓')
 
 
 
