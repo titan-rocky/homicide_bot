@@ -56,7 +56,7 @@ async def on_message(message):
 			elif len(b)==2:
 
 				def check(m):
-					return m.content='confirm' and m.channel=message.channel
+					return m.content=='confirm' and m.channel==message.channel
 
 				try:
 					msg=cl.wait_for('message',check=check,timeout=30)
