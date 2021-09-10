@@ -12,7 +12,7 @@ import csv
 from alive import keep_alive
 
 
-token=os.getenv('DISCORD_TOKEN')
+token=os.environ['DISCORD_TOKEN']
 
 cl=discord.client.Client()
 
