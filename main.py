@@ -11,8 +11,6 @@ import json
 import csv
 from alive import keep_alive
 
-print((os.environ['DISCORD_TOKEN']))
-bs_APIKEY=token=os.environ['BRAWL_API_KEY']
 
 cl=discord.client.Client()
 
@@ -27,13 +25,20 @@ async def on_ready():
 
 
 
+@cl.event
+async def on_message(message):
+	if message.startswith('$')
+
+def header():
+	bs_APIKEY=os.environ['BRAWL_API_KEY']
+	m={'Accept':'application/json','authorization':f'Bearer {bs_APIKEY}'}
+	return m
+
+
 
 @cl.event
 async def role_update():
-	m={'Accept':'application/json','authorization':f'Bearer {bs_APIKEY}'}
-
-	b=requests.get(r'https://api.brawlstars.com/v1/clubs/%23202U9UPLU/members',headers=m) # %23 - js '#'
-
+	b=requests.get(r'https://api.brawlstars.com/v1/clubs/%23202U9UPLU/members',headers=header()) # %23 - js '#
 	dic=b.json()
 	print(dic)
 	if 'reason' in dic and dic['reason']=='accessDenied.invalidIp':
