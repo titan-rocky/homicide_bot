@@ -38,7 +38,7 @@ async def on_message(message):
 		if str(message.author.id)=='557914347490508806':
 			await message.channel.send('Hello m\'Boss')
 		elif str(message.author.id)=='7386528323409019396':
-			await message.channel.send('Hello Guardian')
+			await message.channel.send('A Warm Welcome , Lord Guardian')
 		elif str(message.author.id)=='709740580988780624':
 			await message.channel.send('Hello Guardian')	
 		else:
