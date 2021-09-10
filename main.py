@@ -15,8 +15,6 @@ import disbsint
 
 op_discord_id=['557914347490508806','709740580988780624']
 
-
-print((os.environ['DISCORD_TOKEN']))
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
 cl=discord.client.Client()
