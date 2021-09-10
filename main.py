@@ -55,7 +55,7 @@ async def on_message(message):
 			elif len(b)!=2:
 				await message.channel.send(f'{message.author.mention} , Please give any entry')
 			elif len(b)==2:
-
+				await message.channel.send(f'{message.author.mention} , Please Confirm your request by typing \'confirm\' (case sensitive)')
 				def check(m):
 					return m.content=='confirm' and m.channel==message.channel
 
