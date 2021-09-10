@@ -32,6 +32,7 @@ async def on_ready():
 async def on_message(message):
 
 	if message.content.startswith('$hi'):
+    print(f'$hi by {message.author.mention} #{message.authot.id}')
 		if message.author.id=='557914347490508806':
 			await message.channel.send('Hello m\'Boss')
 		elif message.author.id=='7386528323409019396':
