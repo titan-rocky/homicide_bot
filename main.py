@@ -48,7 +48,7 @@ async def on_message(message):
 		print(f'$addid requested by {message.author.name}#{message.author.discriminator} id {message.author.id}')
 		if str(message.author.id) in op_discord_id:
 			b=message.content
-			b=b.lstrip('$addid ').strip()
+			b=b.lstrip('$addid ').split(' ')
 			print(b)
 			if len(b)>2:
 				await message.channel.send(f'{message.author.mention} , you can add only one entry')
