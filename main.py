@@ -34,7 +34,7 @@ async def on_ready():
 async def on_message(message):
 
 	if message.content.startswith('$hi'):
-		print(f'$hi by {message.author.name}#{message.author.discriminator} id{message.author.id}')
+		print(f'$hi by {message.author.name}#{message.author.discriminator} id {message.author.id}')
 		if str(message.author.id)=='557914347490508806':
 			await message.channel.send('Hello m\'Boss')
 		elif str(message.author.id)=='7386528323409019396':
@@ -45,7 +45,7 @@ async def on_message(message):
 			await message.channel.send(f'Hello ,{message.author.name} ')
 
 	if message.content.startswith('$addid'):
-    print(f'$addid requested by {message.author.name}#{message.author.discriminator} id{message.author.id}')
+    print(f'$addid requested by {message.author.name}#{message.author.discriminator} id {message.author.id}')
 		if message.author.id in op_discord_id:
 			b=message.content
 			b=b.lstrip('$addid ').strip()
