@@ -12,6 +12,9 @@ import csv
 from alive import keep_alive
 
 
+print((os.environ['DISCORD_TOKEN']))
+bs_APIKEY=os.environ['BRAWL_API_KEY']
+
 cl=discord.client.Client()
 
 
