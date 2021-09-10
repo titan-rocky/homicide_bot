@@ -30,7 +30,7 @@ async def on_ready():
 
 @cl.event
 async def on_message(message):
-	if message.startswith('$hi'):
+	if message.content.startswith('$hi'):
 		await message.channel.send('Hello m`boss')
 
 def header():
