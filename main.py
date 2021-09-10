@@ -33,6 +33,7 @@ async def on_ready():
 @cl.event
 async def on_message(message):
 
+	# $hi command
 	if message.content.startswith('$hi'):
 		print(f'$hi by {message.author.name}#{message.author.discriminator} id {message.author.id}')
 		if str(message.author.id)=='557914347490508806':
@@ -44,6 +45,7 @@ async def on_message(message):
 		else:
 			await message.channel.send(f'Hello ,{message.author.name} ')
 
+	# $addit command - discord_brawl stars id integration
 	if message.content.startswith('$addid'):
 		print(f'$addid requested by {message.author.name}#{message.author.discriminator} id {message.author.id}')
 		if str(message.author.id) in op_discord_id:
