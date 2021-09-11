@@ -182,6 +182,5 @@ async def tip(ctx):
 	e.set_footer(text=f'Requested By {ctx.author.display_name} ')
 	await ctx.send(embed=e)
 
-
 keep_alive()
 cl.run(os.environ['DISCORD_TOKEN'])
