@@ -121,8 +121,13 @@ async def on_command(ctx):
 	con2=''
 	for i in range (len(con)):
 		con2=con2+'\n'+f'arg{i+1} : {con[i]}'
+
 	dd=discord.Embed(color=random.choice(col),title="Command Logs",desc='ss')
-	dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : \n{con2}')
+
+	if con2:
+		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : \n{con2}')
+	else:
+		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : none')
 	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator}')
 	webhook.send(embed=dd)
 	    
