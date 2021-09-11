@@ -112,7 +112,7 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	print(f'{ctx.mesage} invoked')
+	print(f'{ctx.message} invoked')
 	    
 @cl.command()
 async def hi(ctx):
