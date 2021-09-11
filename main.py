@@ -8,7 +8,7 @@ import os
 import random
 import requests
 import json
-
+import datetime
 import csv
 from alive import keep_alive
 import disbsint
@@ -115,8 +115,10 @@ async def on_message(message):
 @cl.event
 async def on_command(ctx):
 	webhook = Webhook.from_url('https://discord.com/api/webhooks/886310128838647838/nlrVxhGd_J8PHZs0hxaLMQ_4qUQBF3nMmZfLoIKjURWh_iYLMmlAxP-aTRmXs4Jd1ilq',adapter=RequestsWebhookAdapter())
-	webhook.send(f'{ctx.message.content} invoked by {ctx.author.name}{ctx.author.discriminator}')
-	print(f'{ctx.message.content} invoked by {ctx.author.name}{ctx.author.discriminator}')
+	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
+	dd=discord.embed(color=random.choice(col),title="Command Logs",desc=f'**{ctx.command.name}**\n{ctx.args}',footer=f'invoked by {ctx.author.name}{ctx.author.discriminator}')
+	webhook.send()
+	print(embed=dd)
 	    
 @cl.command()
 async def hi(ctx):
