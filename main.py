@@ -1,5 +1,5 @@
 import discord
-import discord.ext.commands
+from discord.ext import commands
 import asyncio
 import tracemalloc
 tracemalloc.start()
@@ -17,7 +17,7 @@ op_discord_id=['557914347490508806','709740580988780624']
 
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
-cl=commands.bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW')
+cl=commands.Bot(command_prefix='$',description='Dedicated for HOMICIDE_CREW')
 
 
 @cl.event
@@ -97,17 +97,17 @@ async def club_entry():
 
 @cl.event
 async def on_message(message):
-	if message.author==bot.user:
+	if message.author==cl.user:
 		return
 
-	bot.process_commands(message)
+	await cl.process_commands(message)
 
 	# $hi command
 	# $addit command - discord_brawl stars id integration
 	# $help - help embed
 		
-@bot.command()
-async def hi():
+@cl.command()
+async def hi(ctx):
 	print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 	if str(ctx.author.id)=='557914347490508806':
 		await ctx.channel.send('Hello m\'Boss')
@@ -119,8 +119,8 @@ async def hi():
 		await message.channel.send(f'Hello ,{message.author.name} ')
 
 
-@bot.command()
-async def addit():
+@cl.command()
+async def addit(ctx):
 	print(f'$addid requested by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 	if str(ctx.author.id) in op_discord_id:
 		b=ctx.message.content
