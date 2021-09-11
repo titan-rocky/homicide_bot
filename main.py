@@ -118,10 +118,10 @@ async def on_command(ctx):
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	con=ctx.message.content
 	con=con.lstrip(f'{cl.command_prefix}{ctx.command.name}').split(' ')
-	print('con',con)
 	con2=''
 	for i in range (len(con)):
-		con2=con2+f'arg{i+1} : {con[i]}'+'\n'
+		if con[i]:
+			con2=con2+f'arg{i+1} : {con[i]}'+'\n'
 	print('con2',con2)
 	dd=discord.Embed(color=random.choice(col),title="Command Logs",desc='ss')
 
