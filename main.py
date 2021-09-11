@@ -109,7 +109,7 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	if isinstance(ctx.channel,discord.channel.DMchannel) and ctx.author != cl.user:
+	if isinstance(ctx.channel,discord.channel.DMChannel) and ctx.author != cl.user:
 		await ctx.send('This is a DM , commands only work on HOMICIDE_CREW server')
 		
 @cl.command()
