@@ -121,7 +121,7 @@ async def on_command(ctx):
 	con2=''
 	for i in range (len(con)):
 		con2=con2+'\n'+f'arg{i+1} : {con[i]}'
-
+	print('con2',con2)
 	dd=discord.Embed(color=random.choice(col),title="Command Logs",desc='ss')
 
 	if con2:
