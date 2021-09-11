@@ -180,7 +180,7 @@ async def tip(ctx):
 	e.add_field(name="\nPrefix:", value=random.choice(tiplist))
 	e.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
 	e.set_footer(text=f'Requested By {ctx.author.display_name} ')
-	await ctx.send(embed=e
+	await ctx.send(embed=e)
 
 
 keep_alive()
