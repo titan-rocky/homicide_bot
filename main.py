@@ -118,11 +118,11 @@ async def hi(ctx):
 	if str(ctx.author.id)=='557914347490508806':
 		await ctx.channel.send('Welcome, *Hon\'ble* **Lord Chief**')
 	elif str(ctx.author.id)=='738652832340901939':
-		await ctx.channel.send('A Warm Welcome , **Guardian** of the **General chat**')
+		await ctx.channel.send('Welcome , **The Guardian** of the **General chat**')
 	elif str(ctx.author.id)=='709740580988780624':
-		await ctx.channel.send('Hello, **Mod**')	
+		await ctx.channel.send('Hello, **Mod 😈**')	
 	else:
-		await ctx.send(f'Hello ,**{ctx.author.name}** ')
+		await ctx.send(f'Welcome , *Hon\'ble* **{ctx.author.name}** ')
 
 
 @cl.command()
