@@ -124,7 +124,7 @@ async def addid(ctx):
 	print(f'$addid requested by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 	if str(ctx.author.id) in op_discord_id:
 		b=ctx.message.content
-		b=b.split(' ')
+		b=b.lstrip('belle addid ').split(' ')
 		print(b)
 		if len(b)>2:
 			await ctx.channel.send(f'{ctx.author.mention} , you can add only one entry')
