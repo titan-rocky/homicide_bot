@@ -119,13 +119,13 @@ async def hi(ctx):
 	if command_switch:
 		print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 		if str(ctx.author.id)=='557914347490508806':
-			await ctx.channel.send('Hello m\'Boss')
+			await ctx.channel.send('Welcome, *Hon\'ble* **Lord Chief**')
 		elif str(ctx.author.id)=='738652832340901939':
-			await ctx.channel.send('A Warm Welcome , Lord Guardian')
+			await ctx.channel.send('A Warm Welcome , **Guardian** of the **General chat**')
 		elif str(ctx.author.id)=='709740580988780624':
-			await ctx.channel.send('Hello, Mod')	
+			await ctx.channel.send('Hello, **Mod**')	
 		else:
-			await ctx.send(f'Hello ,{ctx.author.name} ')
+			await ctx.send(f'Hello ,**{ctx.author.name}** ')
 
 
 @cl.command()
