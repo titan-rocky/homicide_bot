@@ -14,7 +14,6 @@ import disbsint
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
-command_switch=1
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
 cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW')
@@ -111,8 +110,7 @@ async def on_message(message):
 async def on_command(ctx):
 	if isinstance(ctx.channel,discord.channel.DMChannel) and ctx.author != cl.user:
 		await ctx.send('This is a DM , commands only work on HOMICIDE_CREW server')
-		global command_switch
-		command_switch=0
+    return
 		
 @cl.command()
 async def hi(ctx):
