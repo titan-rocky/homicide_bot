@@ -112,7 +112,7 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	print(f'{ctx.message} invoked')
+	print(f'{ctx.message} invoked by {ctx.author.name}{ctx.author.discriminator}')
 	    
 @cl.command()
 async def hi(ctx):
