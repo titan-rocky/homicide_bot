@@ -110,21 +110,19 @@ async def on_message(message):
 async def on_command(ctx):
 	if isinstance(ctx.channel,discord.channel.DMChannel) and ctx.author != cl.user:
 		await ctx.send('This is a DM , commands only work on HOMICIDE_CREW server')
-    return
+	    return
 		
 @cl.command()
 async def hi(ctx):
-	print(command_switch)
-	if command_switch:
-		print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
-		if str(ctx.author.id)=='557914347490508806':
-			await ctx.channel.send('Welcome, *Hon\'ble* **Lord Chief**')
-		elif str(ctx.author.id)=='738652832340901939':
-			await ctx.channel.send('A Warm Welcome , **Guardian** of the **General chat**')
-		elif str(ctx.author.id)=='709740580988780624':
-			await ctx.channel.send('Hello, **Mod**')	
-		else:
-			await ctx.send(f'Hello ,**{ctx.author.name}** ')
+	print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
+	if str(ctx.author.id)=='557914347490508806':
+		await ctx.channel.send('Welcome, *Hon\'ble* **Lord Chief**')
+	elif str(ctx.author.id)=='738652832340901939':
+		await ctx.channel.send('A Warm Welcome , **Guardian** of the **General chat**')
+	elif str(ctx.author.id)=='709740580988780624':
+		await ctx.channel.send('Hello, **Mod**')	
+	else:
+		await ctx.send(f'Hello ,**{ctx.author.name}** ')
 
 
 @cl.command()
