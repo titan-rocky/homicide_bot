@@ -1,5 +1,6 @@
 import discord
-from discord.ext import commands,Webhook,RequestsWebhookAdapter
+from discord import Webhook,RequestsWebhookAdapter
+from discord.ext import commands
 import asyncio
 import tracemalloc
 tracemalloc.start()
