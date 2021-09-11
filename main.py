@@ -17,7 +17,7 @@ op_discord_id=['557914347490508806','709740580988780624']
 
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
-cl=commands.Bot(command_prefix='$',description='Dedicated for HOMICIDE_CREW')
+cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW')
 
 
 @cl.event
