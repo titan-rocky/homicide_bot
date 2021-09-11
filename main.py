@@ -117,8 +117,8 @@ async def on_command(ctx):
 	webhook = Webhook.from_url('https://discord.com/api/webhooks/886310128838647838/nlrVxhGd_J8PHZs0hxaLMQ_4qUQBF3nMmZfLoIKjURWh_iYLMmlAxP-aTRmXs4Jd1ilq',adapter=RequestsWebhookAdapter())
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	dd=discord.Embed(color=random.choice(col),title="Command Logs",desc=f'**{ctx.command.name}**\n{ctx.args}',footer=f'invoked by {ctx.author.name}{ctx.author.discriminator}')
-	webhook.send()
-	print(embed=dd)
+	webhook.send(embed=dd)
+	print(f'{ctx.message.content} invoked by {ctx.author.id}{ctx.author.discriminator}')
 	    
 @cl.command()
 async def hi(ctx):
