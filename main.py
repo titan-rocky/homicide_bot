@@ -66,12 +66,14 @@ async def on_message(message):
 				except asyncio.TimeoutError:
 					await message.channel.send(f'{message.author.mention} Your Request has been declined')
 				else:
-					print(f'added {b[0]}:{b[1]} disbs.csv')
 					disbsint.add_entry(b[0],b[1])
+					print(f'added {b[0]}:{b[1]} disbs.csv')
+					await message.channel.send(f'Added ID {b[0]} successfully !')
 		else:
 			await message.channel.send('You are not Authorized 😓')
 
-
+		# $help - help embed
+		
 
 
 
@@ -99,6 +101,8 @@ async def role_update():
 			data=[i['tag'],i['name'],i['role'],i['trophies']]#;data=[f'{i}'.encode() for i in data]
 			e.writerow(data)
 		file.close()
+
+		roles={'member':699145204082671677,'senior':691477643387863131,'vicePresident':691475835835645955,'president':691476710524321833}
 
 
 @cl.event
