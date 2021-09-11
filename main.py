@@ -118,7 +118,7 @@ async def on_command(ctx):
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	dd=discord.Embed(color=random.choice(col),title="Command Logs",desc='ss')
 	dd.add_field(name=f'{ctx.command.name}',value='Arguments : {ctx.args}')
-	dd.set.footer(text=f'invoked by {ctx.author.name}{ctx.author.discriminator}')
+	dd.set_footer(text=f'invoked by {ctx.author.name}{ctx.author.discriminator}')
 	webhook.send(embed=dd)
 	print(f'{ctx.message.content} invoked by {ctx.author.id}{ctx.author.discriminator}')
 	    
