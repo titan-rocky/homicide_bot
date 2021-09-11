@@ -120,7 +120,7 @@ async def hi(ctx):
 
 
 @cl.command()
-async def addit(ctx):
+async def addid(ctx):
 	print(f'$addid requested by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 	if str(ctx.author.id) in op_discord_id:
 		b=ctx.message.content
