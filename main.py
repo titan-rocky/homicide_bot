@@ -98,8 +98,12 @@ async def club_entry():
 async def on_message(message):
 	if message.author==cl.user:
 		return
-
-	await cl.process_commands(message)
+		
+	if isinstance(ctx.channel,discord.channel.DMChannel) and ctx.author != cl.user:
+		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
+		return
+	else:
+		await cl.process_commands(message)
 
 	# $hi command
 	# $addit command - discord_brawl stars id integration
@@ -108,9 +112,7 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	if isinstance(ctx.channel,discord.channel.DMChannel) and ctx.author != cl.user:
-		await ctx.send('This is a DM , commands only work on HOMICIDE_CREW server')
-		return
+	print(f'{ctx.mesage} invoked')
 	    
 @cl.command()
 async def hi(ctx):
@@ -165,7 +167,7 @@ async def tip(ctx):
 	'**General :** \nDont underestimate any brawlers . auto-aim attacks can change Dusk to Dawn . Beware !!',
 	'**Dynamike Mains :** \nNever ever think of using auto-aim for Dynamike . It will affect you badly !! . Seriously!',
 	'**General :** \nUse aimed attacks for enemies at large distances and use the aimbot for quick attacks to deal fast damage',
-	'**Leon Mains :** \nEnemy Leon\'s clone deals 2 times your brawler\'s damage  . Find it by attacking once , don\'t waste your Ammo .  Or else leon will use his 3 ammo and kill you . You dont need it nah ? Be patient.\nNote: This is only for leon\'s clone at larger distances , if you check when leon is near you , You will be FIRED!!',
+	'**Leon Mains :** \nEnemy Leon\'s clone will receive twice of your brawler\'s damage  . Find it by attacking once , don\'t waste your Ammo .  Or else leon will use his 3 ammo and kill you . You dont need it nah ? Be patient.\nNote: This is only for leon\'s clone at larger distances , if you check when leon is near you , You will be FIRED!!',
 	'**Advice :** \nUse the Ammos wisely . Patience is the key !',
 	'**Advice :** \nHave almost full patience in brawl ball . Use supers , gadgets and ammos very wisely . they are NOT INFINITE . Enemies change the ball\'s fate to our goals within fraction of seconds . So dont miss the ball and blame the teammates . All the best !'
 	]
