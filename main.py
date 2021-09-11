@@ -114,7 +114,7 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	webhook = Webhook.partial.from_url('https://discord.com/api/webhooks/886310128838647838/nlrVxhGd_J8PHZs0hxaLMQ_4qUQBF3nMmZfLoIKjURWh_iYLMmlAxP-aTRmXs4Jd1ilq',adapter=RequestsWebhookAdapter())
+	webhook = Webhook.from_url('https://discord.com/api/webhooks/886310128838647838/nlrVxhGd_J8PHZs0hxaLMQ_4qUQBF3nMmZfLoIKjURWh_iYLMmlAxP-aTRmXs4Jd1ilq',adapter=RequestsWebhookAdapter())
 	webhook.send(f'{ctx.message.content} invoked by {ctx.author.name}{ctx.author.discriminator}')
 	print(f'{ctx.message.content} invoked by {ctx.author.name}{ctx.author.discriminator}')
 	    
