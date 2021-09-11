@@ -153,5 +153,32 @@ async def addid(ctx):
 		await ctx.channel.send('You are not Authorized 😓')
 
 
+@cl.command()
+async def tip(ctx):
+	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
+	tiplist=[
+	'**Shelly in BrawlBall :** \nwith super activated,  while shooting the ball towards walls near goal box , use your super to break walls and it goes into goal box. GOAL!!! the enemies will leave , thinking that walls will prevent the goal',
+	'**Mortis in BrawlBall :** \n\nuse the walls to do Bouncing Dodge so that ball crosses the enemy without giving to them , then use the attack to pass through them and take the ball . This Makes you  Pass the enemy easily',
+	'**General :** \nUse the Aimbot only when the enemy is at a distance of half of your brawler range',
+	'**General :** \nUse aimed attacks for enemies at large distances and use the aimbot for quick attacks to deal fast damage',
+	'**Long Range Brawlers :** \nTarget  the enemies at a place where he will be present after you attack . It will be helpful if you calculate . You are a Genius . aren\'t you ?',
+	'**General :** \nDont underestimate any brawlers . aimbots can change Dusk to Dawn . Beware !!',
+	'**General :** \nDont underestimate any brawlers . aimbots can change the Dusk to Dawn . Beware !!',
+	'**General :** \nNever ever think of using aimbot for Dynamike and Mortis . It will affect you badly !! . Seriously!',
+	'**General :** \nUse aimed attacks for enemies at large distances and use the aimbot for quick attacks to deal fast damage',
+	'**Leon Mains :** \nEnemy Leon\'s clone deals 2 times your brawler\'s damage  . Find it by attacking once , don\'t waste your Ammo .  Or else leon will use his 3 ammo and kill you . You dont need it nah ? Be patient.\nNote: This is only for leon\'s clone at larger distances , if you check when leon is near you , You will be FIRED!!',
+	'**Advice :** \nUse the Ammos wisely . Patience is the key !',
+	'**Advice :** \nHave almost full patience in brawl ball . Use supers , gadgets and ammos very wisely . they are NOT INFINITE . Enemies change the ball\'s fate to our goals within fraction of seconds . So dont miss the ball and blame the teammates . All the best !'
+	]
+	l=random.randint(0,len(col)-1)
+	ee='''Use prefix **nesa** to use commands of mine\n\nCommands:\n**nesa kill** : To kill Ya boys with Commands\n**nesa funnyface** : To Spend some time in posting random shitty\n            Images of Our Specimens\n**nesa help** : show this message '''
+	e=discord.Embed(title='A Tip from this poor lad',desc=ee,color=col[l])
+	e.set_author(name='ModerBellator , The AutoModerator of Homicide Crew')
+	e.add_field(name="\nPrefix:", value=random.choice(tiplist))
+	e.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
+	e.set_footer(text=f'Requested By {ctx.author.display_name} ')
+	await ctx.send(embed=e)
+
+
 keep_alive()
 cl.run(os.environ['DISCORD_TOKEN'])
