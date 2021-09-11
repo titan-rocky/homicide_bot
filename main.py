@@ -111,7 +111,7 @@ async def on_command(ctx):
 	if isinstance(ctx.channel,discord.channel.DMChannel) and ctx.author != cl.user:
 		await ctx.send('This is a DM , commands only work on HOMICIDE_CREW server')
 	    return
-		
+	    
 @cl.command()
 async def hi(ctx):
 	print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
