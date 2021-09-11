@@ -98,8 +98,8 @@ async def club_entry():
 async def on_message(message):
 	if message.author==cl.user:
 		return
-		
-	if isinstance(ctx.channel,discord.channel.DMChannel) and ctx.author != cl.user:
+
+	if isinstance(message.channel,discord.channel.DMChannel) and ctx.author != cl.user:
 		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
 		return
 	else:
