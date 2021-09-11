@@ -23,7 +23,7 @@ cl=discord.client.Client()
 @cl.event
 async def on_ready():
 	print('I am Ready')
-	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Black Flames",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='The Black Flames',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
+	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Shockers with Positive Feedback",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='The Black Flames',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
 	#await cl.change_presence(activity=discord.Streaming(name="Black Flames",url='https://www.twitch.tv/titan_rocky')
 	cl.loop.create_task(club_entry())
 	cl.loop.create_task(role_update())
@@ -104,6 +104,7 @@ async def role_update():
 
 		roles={'member':699145204082671677,'senior':691477643387863131,'vicePresident':691475835835645955,'president':691476710524321833}
 
+	await asyncio.sleep(60)
 
 @cl.event
 async def club_entry():
