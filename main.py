@@ -116,11 +116,14 @@ async def on_message(message):
 async def on_command(ctx):
 	webhook = Webhook.from_url('https://discord.com/api/webhooks/886310128838647838/nlrVxhGd_J8PHZs0hxaLMQ_4qUQBF3nMmZfLoIKjURWh_iYLMmlAxP-aTRmXs4Jd1ilq',adapter=RequestsWebhookAdapter())
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
+	con=ctx.message.content
+	con=con.lstrip(f'{cl.command_prefix}{ctx.command.name}').split(' ')
+	for i in range (len(con)):
+		con2=con2+'\n'+f'arg{i+1} : {con[i]}'
 	dd=discord.Embed(color=random.choice(col),title="Command Logs",desc='ss')
-	dd.add_field(name=f'{ctx.command.name}',value=f'Arguments : {ctx.args}')
-	dd.set_footer(text=f'invoked by {ctx.author.name}{ctx.author.discriminator}')
+	dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : \n{con2}')
+	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator}')
 	webhook.send(embed=dd)
-	print(f'{ctx.message.content} invoked by {ctx.author.id}{ctx.author.discriminator}')
 	    
 @cl.command()
 async def hi(ctx):
