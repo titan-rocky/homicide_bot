@@ -176,7 +176,7 @@ async def tip(ctx):
 	l=random.randint(0,len(col)-1)
 	e=discord.Embed(title='A Tip from this poor lad',desc='',color=col[l])
 	e.set_author(name='ModerBellator , The AutoModerator of Homicide Crew')
-	e.add_field(name="", value=random.choice(tiplist))
+	e.add_field(name=" ", value=random.choice(tiplist))
 	e.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
 	e.set_footer(text=f'Requested By {ctx.author.display_name} ')
 	await ctx.send(embed=e)
