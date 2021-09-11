@@ -109,7 +109,7 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	if isinstance(ctx.channel,discord.channe,.DMchannel) and message.author != bot.user:
+	if isinstance(ctx.channel,discord.channel.DMchannel) and ctx.author != cl.user:
 		await ctx.send('This is a DM , commands only work on HOMICIDE_CREW server')
 		
 @cl.command()
@@ -122,7 +122,7 @@ async def hi(ctx):
 	elif str(ctx.author.id)=='709740580988780624':
 		await ctx.channel.send('Hello, Mod')	
 	else:
-		await message.channel.send(f'Hello ,{message.author.name} ')
+		await ctx.send(f'Hello ,{ctx.author.name} ')
 
 
 @cl.command()
@@ -151,8 +151,6 @@ async def addid(ctx):
 				await ctx.channel.send(f'Added ID {b[0]} successfully !')
 	else:
 		await ctx.channel.send('You are not Authorized 😓')
-
-
 
 
 keep_alive()
