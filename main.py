@@ -164,7 +164,7 @@ async def tip(ctx):
 	'**Long Range Brawlers :** \nTarget  the enemies at a place where he will be present after you attack . It will be helpful if you calculate . You are a Genius . aren\'t you ?',
 	'**General :** \nDont underestimate any brawlers . aimbots can change Dusk to Dawn . Beware !!',
 	'**General :** \nDont underestimate any brawlers . aimbots can change the Dusk to Dawn . Beware !!',
-	'**General :** \nNever ever think of using aimbot for Dynamike and Mortis . It will affect you badly !! . Seriously!',
+	'**Dynamike Mains :** \nNever ever think of using aimbot for Dynamike . It will affect you badly !! . Seriously!',
 	'**General :** \nUse aimed attacks for enemies at large distances and use the aimbot for quick attacks to deal fast damage',
 	'**Leon Mains :** \nEnemy Leon\'s clone deals 2 times your brawler\'s damage  . Find it by attacking once , don\'t waste your Ammo .  Or else leon will use his 3 ammo and kill you . You dont need it nah ? Be patient.\nNote: This is only for leon\'s clone at larger distances , if you check when leon is near you , You will be FIRED!!',
 	'**Advice :** \nUse the Ammos wisely . Patience is the key !',
