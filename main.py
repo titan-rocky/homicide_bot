@@ -23,7 +23,7 @@ cl=discord.client.Client()
 @cl.event
 async def on_ready():
 	print('I am Ready')
-	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Shockers with Positive Feedback",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='The Black Flames',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
+	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Shockers with Positive Feedback",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Shockers with Positive Feedback',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
 	#await cl.change_presence(activity=discord.Streaming(name="Black Flames",url='https://www.twitch.tv/titan_rocky')
 	cl.loop.create_task(club_entry())
 	cl.loop.create_task(role_update())
