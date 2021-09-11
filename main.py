@@ -105,6 +105,12 @@ async def on_message(message):
 	# $hi command
 	# $addit command - discord_brawl stars id integration
 	# $help - help embed
+
+
+@cl.event
+async def on_command(ctx):
+	if isinstance(ctx.channel,discord.channe,.DMchannel) and message.author != bot.user:
+		await ctx.send('This is a DM , commands only work on HOMICIDE_CREW server')
 		
 @cl.command()
 async def hi(ctx):
