@@ -242,10 +242,20 @@ async def tip(ctx):
 
 @cl.command()
 async def joke(ctx):
-	url = "https://dad-jokes.p.rapidapi.com/random/joke"
-	headers = {'x-rapidapi-host': "dad-jokes.p.rapidapi.com",'x-rapidapi-key': os.environ['dadjoke_api_key']}
-	response = requests.request("GET", url, headers=headers)
-	await ctx.send(f'{response.text}')
+	key=os.environ['joke_api_key']
+	url = "https://jokeapi-v2.p.rapidapi.com/joke/0"
+	querystring = {"format":"json","idRange":"0-150","blacklistFlags":"nsfw, religious, political, racist, sexist, explicit","safe-mode":"true"}
+	headers = {
+	    'x-rapidapi-host': "jokeapi-v2.p.rapidapi.com",
+	    'x-rapidapi-key': f'{key}'
+	    }
+	response = requests.request("GET", url, headers=headers, params=querystring)
+	answer=response.json()
+	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x00ffef,description=f'Category : {answer['category']}')
+	mb.set_author(name='Someone called me for jokes (⊙_⊙;) ')
+	mb.add_field(name=f'Father : {answer['setup']}',value=f'||{answer['delivery']}||\n\n*Click on it to reveal*')
+	mb.set_footer(text='Thanks to Joke API | Website : https://v2.jokeapi.dev/')
+	await ctx.send(embed=mb)
 
 keep_alive()
 cl.run(os.environ['DISCORD_TOKEN'])
