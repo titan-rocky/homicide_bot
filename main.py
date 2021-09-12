@@ -25,7 +25,8 @@ cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW
 @cl.event
 async def on_ready():
 	print('I am Ready')
-	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Shockers with Positive Feedback",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Shockers with Positive Feedback',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
+	#discord.Streaming(name="Shockers with Positive Feedback",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Shockers with Positive Feedback',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}
+	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Leagen Returns",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Leagen Returns',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
 	#await cl.change_presence(activity=discord.Streaming(name="Black Flames",url='https://www.twitch.tv/titan_rocky')
 	cl.loop.create_task(club_entry())
 	cl.loop.create_task(role_update())
