@@ -12,6 +12,7 @@ import datetime
 import csv
 from alive import keep_alive
 import disbsint
+import datetime
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
@@ -111,6 +112,21 @@ async def on_message(message):
 	# $addit command - discord_brawl stars id integration
 	# $help - help embed
 
+@cl.event
+async def on_member_join(member):
+	now=datetime.now()
+	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
+	ch=cl.get_channel(691292302580121693)  #homicide crew general chat id
+	e=discord.Embed(title='HOMICIDE:skull_crossbones:CREW',color=random.choice(col),url='https://cdn.discordapp.com/attachments/737942309173329985/737973140361183232/JPEG_20200323_145525_cropped.jpg',description='You Have joined our Discord Server ó‿ó')
+	e.set_author(name='New member')
+	e.add_field(name=f'Welcome to our Family ! {member.mention}',value='There are many features in this server, pl. do check them out')
+	e.set_footer(text='Please do read #welcome-ó‿ó for more information . For queries , contact the admin privately')
+	cdx=now.strftime('%d %M,%y')
+	e.add_field(title='Joined On',value=f'{cdx}')
+	e.set_image(url='https://cdn.discordapp.com/attachments/737942309173329985/742612222429102140/Homologo.png')
+	e.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/886442415219687454/maxresdefault.jpg')
+	await ch.send(embed=e)
+
 
 @cl.event
 async def on_command(ctx):
@@ -129,7 +145,9 @@ async def on_command(ctx):
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : \n{con2}')
 	else:
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : none')
-	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator}')
+	now=datetime.datetime.now
+	timestamp=now.strftime('%d %B,%Y - %H:%M ')
+	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {timestamp}')
 	webhook.send(embed=dd)
 	    
 @cl.command()
