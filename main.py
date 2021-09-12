@@ -103,6 +103,10 @@ async def on_message(message):
 		return
 	bad_word=['junni','poinda','Pointhe','kudhi','kuthi','Tavethiya','nigga']
 	words=message.content.split(' ')
+	for i in words:
+		for j in bad_word:
+			if i.lower()==j.lower() or j.lower() in i.lower():
+				await message.delete(reason='bad words')
 
 	if isinstance(message.channel,discord.channel.DMChannel) and message.author != cl.user:
 		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
