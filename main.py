@@ -118,6 +118,18 @@ async def on_message(message):
 	# $hi command
 	# $addit command - discord_brawl stars id integration
 	# $help - help embed
+@cl.event
+async def on_message_delete(message):
+	url1=os.environ['messsagelog_webhook_url']
+	webhook = Webhook.from_url(f'{url1}',adapter=RequestsWebhookAdapter())
+	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
+	dd=discord.Embed(color=random.choice(col),title="Message Deletion")
+	dd.add_field(name=f'Message :',value=f'{message.author}')
+	bnow=datetime.datetime.now()
+	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
+	dd.set_footer(text=f'sent by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
+	webhook.send(embed=dd)
+
 
 @cl.event
 async def on_member_join(member):
