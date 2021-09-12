@@ -124,7 +124,7 @@ async def on_message_delete(message):
 	webhook = Webhook.from_url(f'{url1}',adapter=RequestsWebhookAdapter())
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
 	dd=discord.Embed(color=random.choice(col),title="Message Deletion")
-	dd.add_field(name=f'Message :',value=f'{message.content}')
+	dd.add_field(name=f'Message :',value=f' {message.content}')
 	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'sent by {message.author.name}#{message.author.discriminator} on {btimestamp}')
@@ -257,11 +257,16 @@ async def joke(ctx):
 		setup=answer['setup']
 		delivery=answer['delivery']
 	except KeyError:
-		cat=setup=delivery='error'
-		
+		if not setup:
+			setup=''
+		elif not delivery:
+			delivery=''
+		elif not setup and not delivery and not cat:
+			setup=delivery=cat='error'
+
 	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x00ffef,description=f'Category : {cat}')
-	mb.set_author(name='Someone called me for jokes (⊙_⊙;) ')
-	mb.add_field(name=f'Father : {setup}',value=f'||{delivery}||\n\n*Click on it to reveal*')
+	mb.set_author(name='Someone called me for jokes ༼ つ ◕_◕ ༽つ ')
+	mb.add_field(name=f'Joke : \n{setup}',value=f'? ಠ_ಠ \n||{delivery}||\n\n*Click on it to reveal*')
 	mb.set_footer(text='Thanks to Joke API | Website : https://v2.jokeapi.dev/')
 	await ctx.send(embed=mb)
 
