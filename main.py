@@ -161,7 +161,7 @@ async def addid(ctx):
 				return m.content=='confirm' and m.channel==ctx.channel
 
 			try:
-				msg=await cl.wait_for('ctx',check=check,timeout=30)
+				msg=await cl.wait_for('message',check=check,timeout=30)
 			except asyncio.TimeoutError:
 				await ctx.channel.send(f'{ctx.author.mention} Your Request has been declined')
 			else:
