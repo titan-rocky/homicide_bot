@@ -124,7 +124,7 @@ async def on_message_delete(message):
 	webhook = Webhook.from_url(f'{url1}',adapter=RequestsWebhookAdapter())
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
 	dd=discord.Embed(color=random.choice(col),title="Message Deletion")
-	dd.add_field(name=f'Message :',value=f'{message.author}')
+	dd.add_field(name=f'Message :',value=f'{message.content}')
 	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'sent by {message.author.name}#{message.author.discriminator} on {btimestamp}')
