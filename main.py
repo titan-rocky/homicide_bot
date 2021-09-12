@@ -239,5 +239,13 @@ async def tip(ctx):
 	e.set_footer(text=f'Requested By {ctx.author.display_name} ')
 	await ctx.send(embed=e)
 
+
+@cl.command
+async def joke(ctx):
+	url = "https://dad-jokes.p.rapidapi.com/random/joke"
+	headers = {'x-rapidapi-host': "dad-jokes.p.rapidapi.com",'x-rapidapi-key': os.environ['dadjoke_api_key']}
+	response = requests.request("GET", url, headers=headers)
+	await ctx.send(f'{response.text}')
+
 keep_alive()
 cl.run(os.environ['DISCORD_TOKEN'])
