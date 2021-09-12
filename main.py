@@ -101,6 +101,8 @@ async def club_entry():
 async def on_message(message):
 	if message.author==cl.user:
 		return
+	bad_word=['junni','poinda','Pointhe','kudhi','kuthi','Tavethiya','nigga']
+	words=message.content.split(' ')
 
 	if isinstance(message.channel,discord.channel.DMChannel) and message.author != cl.user:
 		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
@@ -150,9 +152,9 @@ async def on_command(ctx):
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : \n{con2}')
 	else:
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : none')
-	now=datetime.datetime.now
-	timestamp=now.strftime('%d %B,%Y - %H:%M ')
-	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {timestamp}')
+	bnow=datetime.datetime.now
+	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
+	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
 	webhook.send(embed=dd)
 	    
 @cl.command()
