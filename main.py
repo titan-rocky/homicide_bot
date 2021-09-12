@@ -101,7 +101,7 @@ async def club_entry():
 async def on_message(message):
 	if message.author==cl.user:
 		return
-	bad_word=['junni','poinda','Pointhe','kudhi','kuthi','Tavethiya','nigga']
+	bad_word=['junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga']
 	words=message.content.split(' ')
 	for i in words:
 		for j in bad_word:
