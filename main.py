@@ -114,7 +114,8 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	webhook = Webhook.from_url(f'{os.environ['commandlog_webhook_url']}',adapter=RequestsWebhookAdapter())
+	url1=os.environ['commandlog_webhook_url']
+	webhook = Webhook.from_url(f'{url1}',adapter=RequestsWebhookAdapter())
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	con=ctx.message.content
 	con=con.lstrip(f'{cl.command_prefix}{ctx.command.name}').split(' ')
