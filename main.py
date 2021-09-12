@@ -251,6 +251,7 @@ async def joke(ctx):
 	    }
 	response = requests.request("GET", url, headers=headers, params=querystring)
 	answer=response.json()
+	print(answer)
 	cat=answer['category']
 	setup=answer['setup']
 	delivery=answer['delivery']
