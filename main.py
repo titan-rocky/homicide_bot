@@ -128,6 +128,7 @@ async def on_member_join(member):
 		e.set_image(url='https://cdn.discordapp.com/attachments/737942309173329985/742612222429102140/Homologo.png')
 		e.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/886442415219687454/maxresdefault.jpg')
 		await ch.send(embed=e)
+		await member.add_roles(member.guild.get_role(743120386404778058),member.guild.get_role(886455823189037106))
 	else:
 		return
 
