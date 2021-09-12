@@ -251,9 +251,12 @@ async def joke(ctx):
 	    }
 	response = requests.request("GET", url, headers=headers, params=querystring)
 	answer=response.json()
-	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x00ffef,description=f'Category : {answer['category']}')
+	cat=answer['category']
+	setup=answer['setup']
+	delivery=answer['delivery']
+	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x00ffef,description=f'Category : {cat}')
 	mb.set_author(name='Someone called me for jokes (⊙_⊙;) ')
-	mb.add_field(name=f'Father : {answer['setup']}',value=f'||{answer['delivery']}||\n\n*Click on it to reveal*')
+	mb.add_field(name=f'Father : {setup}',value=f'||{delivery}||\n\n*Click on it to reveal*')
 	mb.set_footer(text='Thanks to Joke API | Website : https://v2.jokeapi.dev/')
 	await ctx.send(embed=mb)
 
