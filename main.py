@@ -12,7 +12,6 @@ import datetime
 import csv
 from alive import keep_alive
 import disbsint
-import datetime
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
@@ -176,6 +175,8 @@ async def hi(ctx):
 		await ctx.channel.send('A Warm Welcome, *Hon\'ble* **Lord Chief**')
 	elif str(ctx.author.id)=='738652832340901939':
 		await ctx.channel.send('A Warm Welcome , **The Guardian** of the **General chat**')
+	elif str(ctx.author.id)=='763356911235497984':
+		await ctx.channel.send('A Warm Welcome , **Lady Boss**')
 	elif str(ctx.author.id)=='709740580988780624':
 		await ctx.channel.send('Hello, **Mod 😈**')	
 	else:
