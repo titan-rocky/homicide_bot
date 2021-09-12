@@ -127,7 +127,7 @@ async def on_message_delete(message):
 	dd.add_field(name=f'Message :',value=f'{message.author}')
 	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
-	dd.set_footer(text=f'sent by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
+	dd.set_footer(text=f'sent by {message.author.name}#{message.author.discriminator} on {btimestamp}')
 	webhook.send(embed=dd)
 
 
