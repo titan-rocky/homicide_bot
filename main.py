@@ -243,7 +243,7 @@ async def tip(ctx):
 @cl.command()
 async def joke(ctx):
 	key=os.environ['joke_api_key']
-	url = "https://jokeapi-v2.p.rapidapi.com/joke/0"
+	url = "https://jokeapi-v2.p.rapidapi.com/joke/Any"
 	querystring = {"format":"json","idRange":"0-150","blacklistFlags":"nsfw, religious, political, racist, sexist, explicit","safe-mode":"true"}
 	headers = {
 	    'x-rapidapi-host': "jokeapi-v2.p.rapidapi.com",
@@ -252,9 +252,13 @@ async def joke(ctx):
 	response = requests.request("GET", url, headers=headers, params=querystring)
 	answer=response.json()
 	print(answer)
-	cat=answer['category']
-	setup=answer['setup']
-	delivery=answer['delivery']
+	try:
+		cat=answer['category']
+		setup=answer['setup']
+		delivery=answer['delivery']
+	except KeyError:
+		cat=setup=delivery='error'
+		
 	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x00ffef,description=f'Category : {cat}')
 	mb.set_author(name='Someone called me for jokes (⊙_⊙;) ')
 	mb.add_field(name=f'Father : {setup}',value=f'||{delivery}||\n\n*Click on it to reveal*')
