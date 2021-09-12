@@ -106,7 +106,7 @@ async def on_message(message):
 	for i in words:
 		for j in bad_word:
 			if i.lower()==j.lower() or j.lower() in i.lower():
-				await message.delete(delay=1)
+				await message.delete()
 				await message.channel.send(f'{message.author.mention} Dont use Bad words Here , you pile of poop 💩 !')
 
 	if isinstance(message.channel,discord.channel.DMChannel) and message.author != cl.user:
