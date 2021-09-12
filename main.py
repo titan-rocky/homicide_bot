@@ -122,10 +122,10 @@ async def on_member_join(member):
 		ch=cl.get_channel(691292302580121693)  #homicide crew general chat id
 		e=discord.Embed(title='HOMICIDE:skull_crossbones:CREW',color=random.choice(col),url='https://cdn.discordapp.com/attachments/737942309173329985/737973140361183232/JPEG_20200323_145525_cropped.jpg',description='You Have joined our Discord Server ó‿ó')
 		e.set_author(name='New member')
-		e.add_field(name=f'Welcome to our Family ! {member.mention}',value='There are many features in this server, pl. do check them out')
+		e.add_field(name=f'Welcome to our Family ! {member.mention}',value='There are many features in this server, pl. do check them out',inline=True)
 		e.set_footer(text='Please do read #welcome-ó‿ó for more information . For queries , contact the admin privately')
-		cdx=now.strftime('%d %M,%y')
-		e.add_field(name='Joined On',value=f'{cdx}')
+		cdx=now.strftime('%d %B,%Y')
+		e.add_field(name='Joined On',value=f'{cdx}',inline=True)
 		e.set_image(url='https://cdn.discordapp.com/attachments/737942309173329985/742612222429102140/Homologo.png')
 		e.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/886442415219687454/maxresdefault.jpg')
 		await ch.send(embed=e)
