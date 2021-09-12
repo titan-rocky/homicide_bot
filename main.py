@@ -120,23 +120,19 @@ async def on_message(message):
 	# $help - help embed
 @cl.event
 async def on_message_delete(message):
-	url1=os.environ['messsagelog_webhook_url']
-	webhook = Webhook.from_url(f'{url1}',adapter=RequestsWebhookAdapter())
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
 	dd=discord.Embed(color=random.choice(col),title="Message Deletion")
 	dd.add_field(name=f'Message :',value=f' {message.content}')
 	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'sent by {message.author.name}#{message.author.discriminator} on {btimestamp}')
-	webhook.send(embed=dd)
+	cl.get_channel(750581748546535556).send(embed=dd)
 
 
 @cl.event
 async def on_member_join(member):
 	now=datetime.datetime.now()
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
-	url1=os.environ['memberlog_webhook_url']
-
 	if not member.bot:
 		ch=cl.get_channel(691292302580121693)  #homicide crew general chat id
 		cdx=now.strftime('%d %B,%Y')
@@ -154,8 +150,6 @@ async def on_member_join(member):
 
 @cl.event
 async def on_command(ctx):
-	url1=os.environ['commandlog_webhook_url']
-	webhook = Webhook.from_url(f'{url1}',adapter=RequestsWebhookAdapter())
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	con=ctx.message.content
 	con=con.lstrip(f'{cl.command_prefix}{ctx.command.name}').split(' ')
@@ -172,7 +166,7 @@ async def on_command(ctx):
 	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
-	webhook.send(embed=dd)
+	cl.get_channel(750581846143664169).send(embed=dd)
 	    
 @cl.command()
 async def hi(ctx):
