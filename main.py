@@ -114,7 +114,7 @@ async def on_message(message):
 
 @cl.event
 async def on_member_join(member):
-	now=datetime.now()
+	now=datetime.datetime.now()
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
 	if not member.bot:
 		ch=cl.get_channel(691292302580121693)  #homicide crew general chat id
