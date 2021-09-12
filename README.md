@@ -1,2 +1,2 @@
-# homicide_bot
-A Brawl Stars Bot
+# a failed project  
+Cant be resolved , this is a junk
