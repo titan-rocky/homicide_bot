@@ -152,7 +152,7 @@ async def on_command(ctx):
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : \n{con2}')
 	else:
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : none')
-	bnow=datetime.datetime.now
+	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
 	webhook.send(embed=dd)
