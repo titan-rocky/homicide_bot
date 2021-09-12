@@ -244,7 +244,7 @@ async def tip(ctx):
 async def joke(ctx):
 	key=os.environ['joke_api_key']
 	url = "https://jokeapi-v2.p.rapidapi.com/joke/Any"
-	querystring = {"format":"json","idRange":"0-150","blacklistFlags":"nsfw, religious, political, racist, sexist, explicit","safe-mode":"true"}
+	querystring = {"format":"json","blacklistFlags":"nsfw,religious,political,racist,sexist,explicit","safe-mode":"true"}
 	headers = {
 	    'x-rapidapi-host': "jokeapi-v2.p.rapidapi.com",
 	    'x-rapidapi-key': f'{key}'
