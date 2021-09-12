@@ -240,7 +240,7 @@ async def tip(ctx):
 	await ctx.send(embed=e)
 
 
-@cl.command
+@cl.command()
 async def joke(ctx):
 	url = "https://dad-jokes.p.rapidapi.com/random/joke"
 	headers = {'x-rapidapi-host': "dad-jokes.p.rapidapi.com",'x-rapidapi-key': os.environ['dadjoke_api_key']}
