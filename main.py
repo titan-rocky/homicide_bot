@@ -114,7 +114,7 @@ async def on_message(message):
 
 @cl.event
 async def on_command(ctx):
-	webhook = Webhook.from_url('https://discord.com/api/webhooks/886310128838647838/nlrVxhGd_J8PHZs0hxaLMQ_4qUQBF3nMmZfLoIKjURWh_iYLMmlAxP-aTRmXs4Jd1ilq',adapter=RequestsWebhookAdapter())
+	webhook = Webhook.from_url(f'{os.environ['commandlog_webhook_url']}',adapter=RequestsWebhookAdapter())
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	con=ctx.message.content
 	con=con.lstrip(f'{cl.command_prefix}{ctx.command.name}').split(' ')
