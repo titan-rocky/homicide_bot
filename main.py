@@ -39,12 +39,8 @@ async def on_message(message):
 	if message.author==cl.user:
 		return
 	if cl.user.mentioned_in(message):
-		if any(['sad','depressed','die','sorrow'] in message.content.split()):
-			dc=await cl.get_guild(887015707366277170).fetch_emoji(887024376917139506)
-			await message.add_reaction(dc)
-		else:
-			dc=await cl.get_guild(887015707366277170).fetch_emoji(887016423854059520)
-			await message.add_reaction(dc)
+		look_aem=await cl.get_guild(887015707366277170).fetch_emoji(887016423854059520)
+		await message.add_reaction(look_aem)
 
 	bad_word=['sunni','fuck','fak','junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga']
 	words=message.content.split(' ')
@@ -53,6 +49,12 @@ async def on_message(message):
 			if i.lower()==j.lower() or j.lower() in i.lower():
 				await message.delete()
 				await message.channel.send(f'{message.author.mention} Dont use Bad words Here , you pile of poop 💩 !')
+	sad_words['sad','depressed','die','sorrow','unhappy','not feeling well']
+	for k in words:
+		for l in bad_word:
+			if k.lower()==l.lower() or k.lower() in l.lower():
+				sad_aem=await cl.get_guild(887015707366277170).fetch_emoji(887024376917139506)
+				await message.add_reaction(sad_aem)
 
 	if isinstance(message.channel,discord.channel.DMChannel) and message.author != cl.user:
 		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
