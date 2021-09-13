@@ -50,11 +50,9 @@ async def on_message(message):
 				await message.delete()
 				await message.channel.send(f'{message.author.mention} Dont use Bad words Here , you pile of poop 💩 !')
 	sad_words=['sad','depressed','die','sorrow','unhappy','not feeling well']
-	for k in words:
-		for l in sad_word:
-			if k.lower()==l.lower() or k.lower() in l.lower():
-				sad_aem=await cl.get_guild(887015707366277170).fetch_emoji(887024376917139506)
-				await message.add_reaction(sad_aem)
+	if any (i in message.content.split() for i in sad_words):
+		sad_aem=await cl.get_guild(887015707366277170).fetch_emoji(887024376917139506)
+		await message.add_reaction(sad_aem)
 
 	if isinstance(message.channel,discord.channel.DMChannel) and message.author != cl.user:
 		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
