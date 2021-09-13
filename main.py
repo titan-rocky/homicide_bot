@@ -126,7 +126,7 @@ async def on_message_delete(message):
 	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'sent by {message.author.name}#{message.author.discriminator} on {btimestamp}')
-	cl.get_channel(750581748546535556).send(embed=dd)
+	await cl.get_channel(750581748546535556).send(embed=dd)
 
 
 @cl.event
@@ -166,7 +166,7 @@ async def on_command(ctx):
 	bnow=datetime.datetime.now()
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
-	cl.get_channel(750581846143664169).send(embed=dd)
+	await cl.get_channel(750581846143664169).send(embed=dd)
 	    
 @cl.command()
 async def hi(ctx):
