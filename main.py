@@ -18,90 +18,24 @@ op_discord_id=['557914347490508806','709740580988780624']
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
 inn=discord.Intents.all()
-cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW',intents=inn)
+cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW',intents=inn,case_insensitive=True)
 
 
 @cl.event
 async def on_ready():
 	print('I am Ready')
-	#discord.Streaming(name="Shockers with Positive Feedback",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Shockers with Positive Feedback',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}
-	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Leagen Returns",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Leagen Returns',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
+	await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="Shockers with Positive Feedback",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Shockers with Positive Feedback',assets={'large_image':'belle','large_text':'sdghsdh'}),game='The Era of Automods')
+	#(status=discord.Status.idle,activity=discord.Streaming(name="Leagen Returns",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Leagen Returns',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
 	#await cl.change_presence(activity=discord.Streaming(name="Black Flames",url='https://www.twitch.tv/titan_rocky')
-	cl.loop.create_task(club_entry())
-	cl.loop.create_task(role_update())
-
-def header():
-	bs_APIKEY=os.environ['BRAWL_API_KEY']
-	m={'Accept':'application/json','authorization':f'Bearer {bs_APIKEY}'}
-	return m
-
-@cl.event
-async def role_update():
-	print('role_update() called')
-	b=requests.get(r'https://api.brawlstars.com/v1/clubs/%23202U9UPLU/members',headers=header()) # %23 - js '#
-	dic=b.json()
-	if 'reason' in dic and dic['reason']=='accessDenied.invalidIp':
-		 print('Access Denied , Invalid IP')
-	else:
-		lis=dic['items']
-		file=open('abc.csv','w',newline='',encoding='UTF-32')
-		e=csv.writer(file,delimiter=',',quotechar='\u01C0', quoting=csv.QUOTE_MINIMAL)
-		head=['TAG','NAME','ROLE','TROPHIES']#;head=[i.encode() for i in head]
-		e.writerow(head)
-		for i in lis:
-			data=[i['tag'],i['name'],i['role'],i['trophies']]#;data=[f'{i}'.encode() for i in data]
-			e.writerow(data)
-		file.close()
-
-		roles={'member':699145204082671677,'senior':691477643387863131,'vicePresident':691475835835645955,'president':691476710524321833}
-
-	await asyncio.sleep(60)
-
-@cl.event
-async def club_entry():
-	print('club_entry() called')
-	mo={}
-	while 0:
-		
-		m={'Accept':'application/json','authorization':f'Bearer {bs_APIKEY}'}
-
-		b=requests.get(r'https://api.brawlstars.com/v1/clubs/%23202U9UPLU/members',headers=m) # %23 - js '#'
-
-		dic=b.json()
-
-		if mo==dic:
-			print('No Entries')
-		elif len(mo)==0:
-			pass
-		else:
-			print(mo['items'])
-			cde=[i for i in mo['items'] if i not in dic['items']]
-			print(cde)
-			await cl.get_channel(877773803252486145).send(cde)
-
-			a1=[len(dic['items']) if len(mo)!=0 else 0][0]
-			a2=[len(mo['items']) if len(mo)!=0 else 0][0]
-			count=a2-a1
-			print(count)
-			await cl.get_channel(877773803252486145).send(f'{count} Entries , Total : {a2} Members ')
-
-			if count<-5:
-				print('Alert')
-				await cl.get_channel(691292302580121693).send('@everyone : Alert ! Many are Leaving the Club , Beware of mass Kickouts ! ')
-
-
-		mo=dic
-
-		await asyncio.sleep(60)
-
-
+	#cl.loop.create_task(club_entry())     brawl api remains.py
+	#cl.loop.create_task(role_update())
 
 
 @cl.event
 async def on_message(message):
 	if message.author==cl.user:
 		return
-	bad_word=['junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga']
+	bad_word=['sunni','fuck','fak','junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga']
 	words=message.content.split(' ')
 	for i in words:
 		for j in bad_word:
@@ -118,6 +52,7 @@ async def on_message(message):
 	# $hi command
 	# $addit command - discord_brawl stars id integration
 	# $help - help embed
+
 @cl.event
 async def on_message_delete(message):
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
