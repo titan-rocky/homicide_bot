@@ -260,7 +260,7 @@ async def joke(ctx):
 		elif not setup and not delivery and not cat:
 			setup=delivery=cat='error'
 
-	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x00ffef,description=f'Category : {cat}')
+	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
 	mb.set_author(name='Someone called me for jokes ༼ つ ◕_◕ ༽つ ')
 	mb.add_field(name=f'Joke : \n{setup}',value=f'? ಠ_ಠ \n||{delivery}||\n\n*Click on it to reveal*')
 	mb.set_footer(text='Thanks to Joke API | Website : https://v2.jokeapi.dev/')
