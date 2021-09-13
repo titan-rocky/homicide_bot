@@ -39,7 +39,7 @@ async def on_message(message):
 	if message.author==cl.user:
 		return
 	if cl.user.mentioned_in(message):
-		await message.add_reaction(cl.fetch_guild(887015707366277170).fetch_emoji(887016423854059520))
+		await message.add_reaction(cl.get_guild(887015707366277170).fetch_emoji(887016423854059520))
 
 	bad_word=['sunni','fuck','fak','junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga']
 	words=message.content.split(' ')
