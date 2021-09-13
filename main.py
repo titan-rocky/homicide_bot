@@ -40,7 +40,7 @@ async def on_message(message):
 		return
 	if cl.user.mentioned_in(message):
 		print(cl.user.mentioned_in(message))
-		await message.reaction_add(cl.fetch_guild(887015707366277170).fetch_emoji(887016423854059520))
+		await message.add_reaction(cl.fetch_guild(887015707366277170).fetch_emoji(887016423854059520))
 	else:
 		print(cl.user.mentioned_in(message))
 
