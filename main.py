@@ -55,7 +55,7 @@ async def on_message(message):
 		await message.add_reaction(sad_aem)
 	if any(i.lower()=='amaterasu' or i.lower()=='itachi' for i in message.content.split(' ')):
 		if random.randint(0,5)==3:
-			await message.send('<a:amaterasu:887033967264550912>')
+			await message.channel.send('<a:amaterasu:887033967264550912>')
 
 	if isinstance(message.channel,discord.channel.DMChannel) and message.author != cl.user:
 		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
