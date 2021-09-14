@@ -18,6 +18,8 @@ import pytz
 op_discord_id=['557914347490508806','709740580988780624']
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
+homicrew_channels={'general':691292302580121693}
+
 inn=discord.Intents.all()
 cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW',intents=inn,case_insensitive=True)
 
@@ -26,10 +28,10 @@ cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW
 async def gud_mor():
 	indtime=datetime.datetime.now(pytz.timezone('Asia/Calcutta'))
 	b=indtime.strftime('%H:%M:%S')
-	if b.startswith('22:00'):
-		await cl.get_channel().send('Good Night Everyone :sleepy_sandy:')
+	if b.startswith('22:07'):
+		await cl.get_channel(homicrew_channels['general']).send('Good Night Everyone :sleepy_sandy:')
 	elif b.startswith('06:00'):
-		await cl.get_channel().send('Good Morning Everyone :sleepy_sandy:')
+		await cl.get_channel(homicrew_channels['general']).send('Good Morning Everyone :sleepy_sandy:')
 
 
 
