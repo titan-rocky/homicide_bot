@@ -216,17 +216,19 @@ async def joke(ctx):
 
 	if answer['error']=='true':
 		mb.add_field(name=f'An Error has been Occured',value=f'Please report it to the Admin.\nThe Problem will be solved soon')
-	elif 'setup' in answer and 'delivery' in answer:
-		setup=answer['setup']
-		delivery=answer['delivery']
-		mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{delivery}||\n\n*Click on it to reveal*')
-	elif 'setup' in answer and 'punchline' in answer:
-		setup=answer['setup']
-		punch=answer['punchline']
-		mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{punch}||\n\n*Click on it to reveal*')
-	elif 'joke' in answer:
-		jok=answer['joke']
-		mb.add_field(name=f'Joke : \n',value=f'||{jok}||')
+	else:
+		cat=answer['category']
+		if 'setup' in answer and 'delivery' in answer:
+			setup=answer['setup']
+			delivery=answer['delivery']
+			mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{delivery}||\n\n*Click on it to reveal*')
+		elif 'setup' in answer and 'punchline' in answer:
+			setup=answer['setup']
+			punch=answer['punchline']
+			mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{punch}||\n\n*Click on it to reveal*')
+		elif 'joke' in answer:
+			jok=answer['joke']
+			mb.add_field(name=f'Joke : \n',value=f'||{jok}||')
 
 
 
