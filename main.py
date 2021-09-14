@@ -211,25 +211,28 @@ async def joke(ctx):
 	    }
 	response = requests.request("GET", url, headers=headers, params=querystring)
 	answer=response.json()
-	print(answer)
+
+	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
+
 	try:
 		cat=answer['category']
 	except KeyError:
 			setup=delivery=cat='error'
-
-	try:
+	if 'setup' in answer and 'delivery' in answer:
 		setup=answer['setup']
-	except KeyError:
-		setup='___'
-
-	try:
 		delivery=answer['delivery']
-	except KeyError:
-		delivery='___'
+		mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{delivery}||\n\n*Click on it to reveal*')
+	elif 'setup' in answer and 'punchline' in answer:
+		setup=answer['setup']
+		punch=answer['punchline']
+		mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{punch}||\n\n*Click on it to reveal*')
+	elif 'joke' in answer:
+		jok=answer['joke']
+		mb.add_field(name=f'Joke : \n',value=f'||{jok}||')
 
-	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
+
+
 	mb.set_author(name='Someone called me for jokes ༼ つ ◕_◕ ༽つ ')
-	mb.add_field(name=f'Joke : \n{setup}',value=f'? ಠ_ಠ \n||{delivery}||\n\n*Click on it to reveal*')
 	mb.set_footer(text='Thanks to Joke API | Website : https://v2.jokeapi.dev/')
 	await ctx.send(embed=mb)
 
