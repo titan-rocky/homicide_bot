@@ -24,7 +24,7 @@ cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW
 
 @tasks.loop(seconds=60)
 async def gud_mor():
-	indtime=datetime.datetime.now(tzinfo=pytz.timezone('Asia/Calcutta'))
+	indtime=datetime.datetime.utcnow(tzinfo=pytz.timezone('Asia/Calcutta'))
 	b=indtime.strftime('%H:%M:%S')
 	print(b)
 	if b.startswith('22:00'):
