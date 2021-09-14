@@ -214,11 +214,9 @@ async def joke(ctx):
 
 	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
 
-	try:
-		cat=answer['category']
-	except KeyError:
-			setup=delivery=cat='error'
-	if 'setup' in answer and 'delivery' in answer:
+	if answer['error']=='true':
+		mb.add_field(name=f'An Error has been Occured',value=f'Please report it to the Admin.\nThe Problem will be solved soon')
+	elif 'setup' in answer and 'delivery' in answer:
 		setup=answer['setup']
 		delivery=answer['delivery']
 		mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{delivery}||\n\n*Click on it to reveal*')
