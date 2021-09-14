@@ -28,10 +28,10 @@ cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW
 async def gud_mor():
 	indtime=datetime.datetime.now(pytz.timezone('Asia/Calcutta'))
 	b=indtime.strftime('%H:%M:%S')
-	if b.startswith('22:07'):
-		await cl.get_channel(homicrew_channels['general']).send('Good Night Everyone :sleepy_sandy:')
+	if b.startswith('23:30'):
+		await cl.get_channel(homicrew_channels['general']).send('Good Night Everyone <a:sleepsandy:887379970769436732>')
 	elif b.startswith('06:00'):
-		await cl.get_channel(homicrew_channels['general']).send('Good Morning Everyone :sleepy_sandy:')
+		await cl.get_channel(homicrew_channels['general']).send('Good Morning Everyone <a:bibigg:887380758795288577>')
 
 
 
