@@ -220,12 +220,12 @@ async def joke(ctx):
 	try:
 		setup=answer['setup']
 	except KeyError:
-		setup='\u200b'
+		setup='___'
 
 	try:
 		delivery=answer['delivery']
 	except KeyError:
-		delivery='\u200b'
+		delivery='___'
 
 	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
 	mb.set_author(name='Someone called me for jokes ༼ つ ◕_◕ ༽つ ')
