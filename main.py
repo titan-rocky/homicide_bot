@@ -218,7 +218,7 @@ async def joke(ctx):
 		mb.add_field(name=f'A Problem has been Occured',value=f'Please report it to the Admin.\nThe Problem will be solved soon')
 	else:
 		cat=answer['category']
-		mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
+		mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x40e0d0,description=f'Category : {cat}')
 		
 		if 'setup' in answer and 'delivery' in answer:
 			setup=answer['setup']
