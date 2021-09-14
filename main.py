@@ -1,6 +1,6 @@
 import discord
 from discord import Webhook,RequestsWebhookAdapter
-from discord.ext import commands
+from discord.ext import commands,tasks
 import asyncio
 import tracemalloc
 tracemalloc.start()
@@ -12,6 +12,7 @@ import datetime
 import csv
 from alive import keep_alive
 import disbsint
+import pytz
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
@@ -21,10 +22,23 @@ inn=discord.Intents.all()
 cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW',intents=inn,case_insensitive=True)
 
 
+@tasks.loop(seconds=60)
+async def gud_mor():
+	indtime=datetime.datetime.now(tzinfo=pytz.timezone('Asia/Calcutta'))
+	b=indtime.strftime('%H:%M:%S')
+	print(b)
+	if b.startswith('22:00'):
+		await cl.get_channel().send('Good Night Everyone :sleepy_sandy:')
+	elif b.startswith('06:00'):
+		await cl.get_channel().send('Good Morning Everyone :sleepy_sandy:')
+
+
+
 @cl.event
 async def on_ready():
 	print('I am Ready')
 	await cl.change_presence(status=discord.Status.idle,activity=discord.Game(name="Shockers with Positive Feedback",assets={'large_image_url':'https://cdn.discordapp.com/attachments/737942309173329985/886997742252081212/PicsArt_09-11-10.29.55.jpg','large_text':'sdghsdh'}))
+	gud_mor().start()
 	#(status=discord.Status.idle,activity=discord.Streaming(name="Leagen Returns",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Leagen Returns',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
 	#await cl.change_presence(activity=discord.Streaming(name="Black Flames",url='https://www.twitch.tv/titan_rocky')
 	
@@ -214,6 +228,15 @@ async def joke(ctx):
 	mb.add_field(name=f'Joke : \n{setup}',value=f'? ಠ_ಠ \n||{delivery}||\n\n*Click on it to reveal*')
 	mb.set_footer(text='Thanks to Joke API | Website : https://v2.jokeapi.dev/')
 	await ctx.send(embed=mb)
+
+
+
+
+
+
+
+
+
 
 keep_alive()
 cl.run(os.environ['DISCORD_TOKEN'])
