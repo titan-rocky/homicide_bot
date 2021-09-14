@@ -230,7 +230,7 @@ async def joke(ctx):
 			mb.add_field(name=f'Father : \n{setup}',value=f'**Son : ?**\n**Father : **||{punch}||\n\n*Click on it to reveal*')
 		elif 'joke' in answer:
 			jok=answer['joke']
-			mb.add_field(name=f'Joke : \n',value=f'||{jok}||')
+			mb.add_field(name=f'Joke : \n',value=f'{jok}')
 
 
 
