@@ -212,11 +212,12 @@ async def joke(ctx):
 	response = requests.request("GET", url, headers=headers, params=querystring)
 	answer=response.json()
 
-	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
 
 	if answer['error']=='true':
-		mb.add_field(name=f'An Error has been Occured',value=f'Please report it to the Admin.\nThe Problem will be solved soon')
+		mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Error')
+		mb.add_field(name=f'A Problem has been Occured',value=f'Please report it to the Admin.\nThe Problem will be solved soon')
 	else:
+		mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
 		cat=answer['category']
 		if 'setup' in answer and 'delivery' in answer:
 			setup=answer['setup']
