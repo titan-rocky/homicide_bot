@@ -26,7 +26,6 @@ cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW
 async def gud_mor():
 	indtime=datetime.datetime.now(pytz.timezone('Asia/Calcutta'))
 	b=indtime.strftime('%H:%M:%S')
-	print(b)
 	if b.startswith('22:00'):
 		await cl.get_channel().send('Good Night Everyone :sleepy_sandy:')
 	elif b.startswith('06:00'):
@@ -213,15 +212,18 @@ async def joke(ctx):
 	print(answer)
 	try:
 		cat=answer['category']
+	except KeyError:
+			setup=delivery=cat='error'
+
+	try:
 		setup=answer['setup']
+	except KeyError:
+		setup='\u200b'
+
+	try:
 		delivery=answer['delivery']
 	except KeyError:
-		if not setup:
-			setup=''
-		elif not delivery:
-			delivery=''
-		elif not setup and not delivery and not cat:
-			setup=delivery=cat='error'
+		delivery='\u200b'
 
 	mb=discord.Embed(title='A Joke said by a father , to his Emotionless Son',col=0x30D5C8,description=f'Category : {cat}')
 	mb.set_author(name='Someone called me for jokes ༼ つ ◕_◕ ༽つ ')
