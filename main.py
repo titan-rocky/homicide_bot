@@ -116,12 +116,12 @@ async def on_member_join(member):
 		e2=discord.Embed(title='New Member of our Family',color=random.choice(col),description='👨‍👦‍👦 Thanks for joining mate')
 		origin=member.created_at
 		origintime=origin.strftime('%d %b, %Y - %h:%m %p')
-		e.add_field(name=f'{member.name} #{member.discriminator}',value=f'{origintime}',inline=True)
-		e.set_thumbnail(url=member.avatar_url)
+		e2.add_field(name=f'{member.name} #{member.discriminator}',value=f'{origintime}',inline=True)
+		e2.set_thumbnail(url=member.avatar_url)
 		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
 		dat=mob.strftime('%d %b, %Y')
 		tim=mob.strftime('%H:%M')
-		e.set_footer(text=f'Joined On {dat} at {tim}')
+		e2.set_footer(text=f'Joined On {dat} at {tim}')
 		await ch2.send(embed=e2)
 	else:
 		return
