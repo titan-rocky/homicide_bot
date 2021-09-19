@@ -116,7 +116,7 @@ async def on_member_join(member):
 		e2=discord.Embed(title='New Member of our Family',color=random.choice(col),description='👨‍👦‍👦 Thanks for joining mate')
 		origin=member.created_at
 		origintime=origin.strftime('%d %b, %Y - %h:%M %p')
-		e.set_author(name=f'{member.name} #{member.discriminator}')
+		e2.set_author(name=f'{member.name} #{member.discriminator}')
 		e2.add_field(name=f'Good To see you here',value=f'Joined on {origintime}\n',inline=True)
 		e2.set_thumbnail(url=member.avatar_url)
 		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
@@ -135,7 +135,7 @@ async def on_member_remove(member):
 	e2=discord.Embed(title='A Member has Left our Family',color=random.choice(col),description='a state of depression and sorrow')
 	mob=datetime.now(pytz.timezone('Asia/Calcutta'))
 	dat=mob.strftime('%d %b, %Y - %h:%M %p')
-	e.set_author(name=f'{member.name} #{member.discriminator}')
+	e2.set_author(name=f'{member.name} #{member.discriminator}')
 	e2.add_field(name=f'Its sad to see you leave this server',value=f'Left on {dat}\n',inline=True)
 	e2.set_thumbnail(url=member.avatar_url)
 
