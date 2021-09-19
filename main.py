@@ -129,6 +129,19 @@ async def on_member_join(member):
 
 
 @cl.event
+async def on_remove(member):
+		ch2=cl.get_channel(889112863103418378)
+		e2=discord.Embed(title='A Member has Left our Family',color=random.choice(col),description='a state of depression and sorrow')
+		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
+		dat=mob.strftime('%d %b, %Y - %h:%M %p')
+		e.set_author(name=f'{member.name} #{member.discriminator}')
+		e2.add_field(name=f'Its sad to see you leave this server',value=f'Left on {dat}\n',inline=True)
+		e2.set_thumbnail(url=member.avatar_url)
+
+		e2.set_footer(text=f'Poor Club !',icon_url='https://media.discordapp.net/attachments/737942309173329985/889123885834981416/322-3224005_unemployment-clip-art.png')
+		await ch2.send(embed=e2)
+
+@cl.event
 async def on_command(ctx):
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	con=ctx.message.content
