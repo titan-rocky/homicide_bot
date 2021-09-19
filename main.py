@@ -114,7 +114,9 @@ async def on_member_join(member):
 
 		ch2=cl.get_channel(889112863103418378)
 		e2=discord.Embed(title='New Member of our Family',color=random.choice(col),description='👨‍👦‍👦 Thanks for joining mate')
-		e.add_field(name=f'{member.name} #{member.discriminator}',value=f'{member.mention}',inline=True)
+		origin=member.created_at
+		origintime=origin.strftime('%d %b, %Y - %h:%m %p')
+		e.add_field(name=f'{member.name} #{member.discriminator}',value=f'{origintime}',inline=True)
 		e.set_thumbnail(f'{member.avatar_url}')
 		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
 		dat=mob.strftime('%d %b, %Y')
