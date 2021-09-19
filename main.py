@@ -115,13 +115,13 @@ async def on_member_join(member):
 		ch2=cl.get_channel(889112863103418378)
 		e2=discord.Embed(title='New Member of our Family',color=0xF8B195,description='👨‍👦‍👦 Thanks for joining mate')
 		origin=member.created_at
-		origintime=origin.strftime('%d %b, %Y - %I:%M %p')
 		e2.set_author(name=f'{member.name} #{member.discriminator}')
-		e2.add_field(name=f'Good To see you here',value=f'Joined on {origintime}\n',inline=True)
 		e2.set_thumbnail(url=member.avatar_url)
 		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
-		dat=mob.strftime('%d %b, %Y')
-		tim=mob.strftime('%H:%M')
+		dat=origin.strftime('%d %b, %Y')
+		tim=origin.strftime('%H:%M')
+		jointime=mob.strftime('%d %b, %Y - %I:%M %p')
+		e2.add_field(name=f'Good To see you here',value=f'Joined on {jointime}\n',inline=True)
 		e2.set_footer(text=f'Account Created on {dat} at {tim}')
 		await ch2.send(embed=e2)
 	else:
