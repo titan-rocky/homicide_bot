@@ -8,7 +8,7 @@ import os
 import random
 import requests
 import json
-import datetime
+from datetime import datetime
 import csv
 from alive import keep_alive
 import disbsint
@@ -57,13 +57,13 @@ async def on_message(message):
 		look_aem=await cl.get_guild(887015707366277170).fetch_emoji(887016423854059520)
 		await message.add_reaction(look_aem)
 
-	bad_word=['sunni','fuck','fak','junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga']
+	bad_word=['sunni','fuck','fak','junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga','sex','penis','vagina','pp']
 	words=message.content.split(' ')
 	for i in words:
 		for j in bad_word:
 			if i.lower()==j.lower() or j.lower() in i.lower():
 				await message.delete()
-				await message.channel.send(f'{message.author.mention} Dont use Bad words Here , you pile of poop 💩 !')
+				await message.channel.send(f'{message.author.mention} Dont use Explicit words Here , you pile of poop 💩 !')
 	sad_words=['sad','depressed','die','sorrow','unhappy','not feeling well']
 	if any (i in message.content.split(' ') for i in sad_words):
 		sad_aem=await cl.get_guild(887015707366277170).fetch_emoji(887024376917139506)
@@ -87,7 +87,7 @@ async def on_message_delete(message):
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
 	dd=discord.Embed(color=random.choice(col),title="Message Deletion")
 	dd.add_field(name=f'Message :',value=f' {message.content}')
-	bnow=datetime.datetime.now()
+	bnow=datetime.now(pytz.timezone('Asia/Calcutta'))
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'sent by {message.author.name}#{message.author.discriminator} on {btimestamp}')
 	await cl.get_channel(750581748546535556).send(embed=dd)
@@ -95,7 +95,7 @@ async def on_message_delete(message):
 
 @cl.event
 async def on_member_join(member):
-	now=datetime.datetime.now()
+	now=datetime.now(pytz.timezone('Asia/Calcutta'))
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
 	if not member.bot:
 		ch=cl.get_channel(691292302580121693)  #homicide crew general chat id
@@ -108,6 +108,17 @@ async def on_member_join(member):
 		e.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/886442415219687454/maxresdefault.jpg')
 		await ch.send(embed=e)
 		await member.add_roles(member.guild.get_role(743120386404778058),member.guild.get_role(886455823189037106))
+
+
+		indtime=datetime.now(pytz.timezone('Asia/Calcutta'))
+
+		ch2=cl.get_channel(889112863103418378)
+		e2=discord.Embed(title='New Member of our Family',color=random.choice(col),description='👨‍👦‍👦 Thanks for joining mate')
+		e.add_field(name=f'{member.name} #{member.discriminator}',value=f'{member.mention}',inline=True)
+		e.set_thumbnail(f'{member.avatar_url}')
+		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
+		e.set_footer(text=f'Joined On {mob.strftime('%d %b, %Y')} at {mob.strftime('%H:%M')}')
+		await ch2.send(embed=e2)
 	else:
 		return
 
@@ -127,7 +138,7 @@ async def on_command(ctx):
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : \n{con2}')
 	else:
 		dd.add_field(name=f'Command : {ctx.command.name}',value=f'Arguments : none')
-	bnow=datetime.datetime.now()
+	bnow=datetime.now(pytz.timezone('Asia/Calcutta'))
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
 	await cl.get_channel(750581846143664169).send(embed=dd)
@@ -144,7 +155,7 @@ async def hi(ctx):
 	elif str(ctx.author.id)=='709740580988780624':
 		await ctx.channel.send('Hello, **Mod 😈**')	
 	else:
-		await ctx.send(f'A Warm Welcome , *Hon\'ble* **{ctx.author.name}** ')
+		await ctx.send(f'A Warm Welcome , *Hon\'ble* **{ctx.author.display_name}** ')
 
 
 @cl.command()
