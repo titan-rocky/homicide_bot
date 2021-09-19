@@ -117,7 +117,7 @@ async def on_member_join(member):
 		origin=member.created_at
 		origintime=origin.strftime('%d %b, %Y - %h:%m %p')
 		e.add_field(name=f'{member.name} #{member.discriminator}',value=f'{origintime}',inline=True)
-		e.set_thumbnail(f'{member.avatar_url}')
+		e.set_thumbnail(url=member.avatar_url)
 		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
 		dat=mob.strftime('%d %b, %Y')
 		tim=mob.strftime('%H:%M')
