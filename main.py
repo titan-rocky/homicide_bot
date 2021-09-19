@@ -26,7 +26,7 @@ cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW
 
 @tasks.loop(seconds=60)
 async def gud_mor():
-	indtime=datetime.datetime.now(pytz.timezone('Asia/Calcutta'))
+	indtime=datetime.now(pytz.timezone('Asia/Calcutta'))
 	b=indtime.strftime('%H:%M:%S')
 	if b.startswith('23:30'):
 		await cl.get_channel(homicrew_channels['general']).send('Good Night Everyone <a:sleepsandy:887379970769436732>')
