@@ -113,9 +113,9 @@ async def on_member_join(member):
 		indtime=datetime.now(pytz.timezone('Asia/Calcutta'))
 
 		ch2=cl.get_channel(889112863103418378)
-		e2=discord.Embed(title='New Member of our Family',color=random.choice(col),description='👨‍👦‍👦 Thanks for joining mate')
+		e2=discord.Embed(title='New Member of our Family',color=0xF8B195,description='👨‍👦‍👦 Thanks for joining mate')
 		origin=member.created_at
-		origintime=origin.strftime('%d %b, %Y - %h:%M %p')
+		origintime=origin.strftime('%d %b, %Y - %I:%M %p')
 		e2.set_author(name=f'{member.name} #{member.discriminator}')
 		e2.add_field(name=f'Good To see you here',value=f'Joined on {origintime}\n',inline=True)
 		e2.set_thumbnail(url=member.avatar_url)
@@ -130,11 +130,11 @@ async def on_member_join(member):
 
 @cl.event
 async def on_member_remove(member):
-	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
+	col=0xF67280
 	ch2=cl.get_channel(889112863103418378)
-	e2=discord.Embed(title='A Member has Left our Family',color=random.choice(col),description='a state of depression and sorrow')
+	e2=discord.Embed(title='A Member has Left our Family',color=col,description='a state of depression and sorrow')
 	mob=datetime.now(pytz.timezone('Asia/Calcutta'))
-	dat=mob.strftime('%d %b, %Y - %h:%M %p')
+	dat=mob.strftime('%d %b, %Y - %I:%M %p')
 	e2.set_author(name=f'{member.name} #{member.discriminator}')
 	e2.add_field(name=f'Its sad to see you leave this server',value=f'Left on {dat}\n',inline=True)
 	e2.set_thumbnail(url=member.avatar_url)
