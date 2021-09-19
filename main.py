@@ -117,7 +117,9 @@ async def on_member_join(member):
 		e.add_field(name=f'{member.name} #{member.discriminator}',value=f'{member.mention}',inline=True)
 		e.set_thumbnail(f'{member.avatar_url}')
 		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
-		e.set_footer(text=f'Joined On {mob.strftime('%d %b, %Y')} at {mob.strftime('%H:%M')}')
+		dat=mob.strftime('%d %b, %Y')
+		tim=mob.strftime('%H:%M')
+		e.set_footer(text=f'Joined On {dat} at {tim}')
 		await ch2.send(embed=e2)
 	else:
 		return
