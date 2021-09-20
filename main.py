@@ -16,6 +16,16 @@ import pytz
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
+
+def check_op(id):
+	op_discord_id=[557914347490508806,709740580988780624]
+	for i in op_discord_id:
+		if not i==id:
+			return False
+		else:
+			return True
+
+
 bs_APIKEY=os.environ['BRAWL_API_KEY']
 
 homicrew_channels={'general':691292302580121693}
@@ -203,6 +213,23 @@ async def addid(ctx):
 				await ctx.channel.send(f'Added ID {b[0]} successfully !')
 	else:
 		await ctx.channel.send('You are not Authorized 😓')
+
+@cl.command()
+async def purge(ctx):
+	try:
+		b=[int(i) for i in ctx.args]
+	except ValueError:
+		await ctx.send('Please Provide a Valid integer <100')
+		b=[]
+
+	if len(b)!=1:
+		await ctx.send('Only One Argument limit(int) required')
+	else:
+		if isinstance(b[0],int):
+			if check_op(message.author.id):
+				await ctx.channel.purge(limit=b[0])
+			else:
+				await ctx.send('You are Not Authorized !')
 
 
 @cl.command()
