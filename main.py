@@ -71,7 +71,7 @@ async def on_message(message):
 	words=message.content.split(' ')
 	for i in words:
 		for j in bad_word:
-			if i.lower()==j.lower() or j.lower() in i.lower():
+			if i.lower()==j.lower():
 				await message.delete()
 				await message.channel.send(f'{message.author.mention} Dont use Explicit words Here , you pile of poop 💩 !')
 	sad_words=['sad','depressed','die','sorrow','unhappy','not feeling well']
