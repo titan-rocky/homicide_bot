@@ -227,7 +227,7 @@ async def purge(ctx,*args):
 		await ctx.send('Only One Argument limit(int) required')
 	else:
 		if isinstance(b[0],int):
-			if check_op(message.author.id):
+			if check_op(ctx.author.id):
 				await ctx.channel.purge(limit=b[0])
 			else:
 				await ctx.send('You are Not Authorized !')
