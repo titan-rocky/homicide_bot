@@ -216,6 +216,7 @@ async def addid(ctx):
 
 @cl.command()
 async def purge(ctx,args):
+	print(args)
 	try:
 		b=[int(i) for i in args]
 	except ValueError:
