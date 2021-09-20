@@ -228,7 +228,10 @@ async def purge(ctx,*args):
 	else:
 		if isinstance(b[0],int):
 			if check_op(ctx.author.id):
-				await ctx.channel.purge(limit=b[0])
+				m=await ctx.channel.purge(limit=b[0])
+				sent=await ctx.channel.send(f'{len(m)} Message(s) Removed !')
+				await asyncio.sleep(10)
+				await sent.delete()
 			else:
 				await ctx.send('You are Not Authorized !')
 
