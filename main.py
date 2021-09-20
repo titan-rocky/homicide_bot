@@ -215,9 +215,9 @@ async def addid(ctx):
 		await ctx.channel.send('You are not Authorized 😓')
 
 @cl.command()
-async def purge(ctx):
+async def purge(ctx,args):
 	try:
-		b=[int(i) for i in ctx.args]
+		b=[int(i) for i in args]
 	except ValueError:
 		await ctx.send('Please Provide a Valid integer <100')
 		b=[]
