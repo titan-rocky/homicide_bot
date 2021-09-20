@@ -215,7 +215,7 @@ async def addid(ctx):
 		await ctx.channel.send('You are not Authorized 😓')
 
 @cl.command()
-async def purge(ctx,args):
+async def purge(ctx,*args):
 	print(args)
 	try:
 		b=[int(i) for i in args]
