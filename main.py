@@ -21,6 +21,7 @@ def check_op(uid):
 	print(uid)
 	op_discord_id=[557914347490508806,709740580988780624]
 	for i in op_discord_id:
+		print(i)
 		if i==uid:
 			print('Auth')
 			return True
