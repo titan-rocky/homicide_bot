@@ -20,10 +20,11 @@ op_discord_id=['557914347490508806','709740580988780624']
 def check_op(id):
 	op_discord_id=[557914347490508806,709740580988780624]
 	for i in op_discord_id:
-		if not i==id:
-			return False
-		else:
+		if i==id:
+			print('Auth')
 			return True
+		else:
+			return False
 
 
 bs_APIKEY=os.environ['BRAWL_API_KEY']
@@ -74,7 +75,7 @@ async def on_message(message):
 			if i.lower()==j.lower():
 				await message.delete()
 				await message.channel.send(f'{message.author.mention} Dont use Explicit words Here , you pile of poop 💩 !')
-	sad_words=['sad','depressed','die','sorrow','unhappy','not feeling well']
+	sad_words=['sadly','disappointed','sad','depressed','die','sorrow','unhappy','not feeling well']
 	if any (i in message.content.split(' ') for i in sad_words):
 		sad_aem=await cl.get_guild(887015707366277170).fetch_emoji(887024376917139506)
 		await message.add_reaction(sad_aem)
