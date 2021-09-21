@@ -25,8 +25,8 @@ def check_op(uid):
 		if i==int(uid):
 			print('Auth')
 			return True
-		else:
-			return False
+	else:
+		return False
 
 
 bs_APIKEY=os.environ['BRAWL_API_KEY']
