@@ -1,5 +1,7 @@
 import discord
+'''
 from discord import Webhook,RequestsWebhookAdapter
+'''
 from discord.ext import commands,tasks
 import asyncio
 import tracemalloc
@@ -10,7 +12,9 @@ import requests
 import json
 from datetime import datetime
 import csv
+'''
 from alive import keep_alive
+'''
 import disbsint
 import pytz
 
