@@ -29,7 +29,6 @@ def check_op(uid):
 		return False
 
 
-bs_APIKEY=os.environ['BRAWL_API_KEY']
 
 homicrew_channels={'general':691292302580121693}
 
@@ -155,6 +154,7 @@ async def on_member_remove(member):
 	e2.set_footer(text=f'Poor Club !',icon_url='https://media.discordapp.net/attachments/737942309173329985/889123885834981416/322-3224005_unemployment-clip-art.png')
 	await ch2.send(embed=e2)
 
+'''
 @cl.event
 async def on_command(ctx):
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
@@ -174,6 +174,7 @@ async def on_command(ctx):
 	btimestamp=bnow.strftime('%d %B,%Y - %H:%M ')
 	dd.set_footer(text=f'invoked by {ctx.author.name}#{ctx.author.discriminator} on {btimestamp}')
 	await cl.get_channel(750581846143664169).send(embed=dd)
+'''
 	    
 @cl.command()
 async def hi(ctx):
@@ -311,6 +312,5 @@ async def joke(ctx):
 
 
 
-keep_alive()
-token='ODY2OTc4MDU5MTc3ODIwMTkw.YPaaPA.vj7dwl5TgM9Rr2myrDaj-0OkQyk'
-cl.run(TOKEN)
+token='ODY2OTc4MDU5MTc3ODIwMTkw.YPaaPA.mth27PjRa-Es7kbQM9qdG4D555U'
+cl.run(token)
