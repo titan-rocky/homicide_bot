@@ -266,7 +266,7 @@ async def tip(ctx):
 
 @cl.command()
 async def joke(ctx):
-	key=os.environ['joke_api_key']
+	key='48b118eb9fmsh14b40e42d9ce1dbp12fa75jsn96de5dd96942'
 	url = "https://jokeapi-v2.p.rapidapi.com/joke/Any"
 	querystring = {"format":"json","blacklistFlags":"nsfw,religious,political,racist,sexist,explicit","safe-mode":"true"}
 	headers = {
@@ -312,4 +312,5 @@ async def joke(ctx):
 
 
 keep_alive()
-cl.run(os.environ['DISCORD_TOKEN'])
+token='ODY2OTc4MDU5MTc3ODIwMTkw.YPaaPA.vj7dwl5TgM9Rr2myrDaj-0OkQyk'
+cl.run(TOKEN)
