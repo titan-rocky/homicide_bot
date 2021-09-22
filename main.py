@@ -12,9 +12,8 @@ import requests
 import json
 from datetime import datetime
 import csv
-'''
 from alive import keep_alive
-'''
+
 import disbsint
 import pytz
 
@@ -314,7 +313,7 @@ async def joke(ctx):
 
 
 
+keep_alive()
 
-
-token='ODY2OTc4MDU5MTc3ODIwMTkw.YPaaPA.mth27PjRa-Es7kbQM9qdG4D555U'
+token=''
 cl.run(token)
