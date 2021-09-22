@@ -313,7 +313,7 @@ async def joke(ctx):
 
 
 
-awake()
+awake('https://ufaiosfoisdhklgvhsdl.umedyostertho.repl.co')
 
-token=''
+token=os.environ['discord_token']
 cl.run(token)
