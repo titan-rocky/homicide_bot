@@ -11,8 +11,17 @@ def home():
 def run():
   app.run(host='0.0.0.0', port=8080)
 
-
-
-def keep_alive():
-  t=Thread(target=run)
-  t.start()
+def ping(target, debug):
+    while(True):
+        r = requests.get(target)
+        if(debug == True):
+            print("Status Code: " + str(r.status_code))
+        time.sleep(random.randint(180,300)) #alternate ping time between 3 and 5 minutes
+def awake(target, debug=False):  
+    log = logging.getLogger('werkzeug')
+    log.disabled = True
+    app.logger.disabled = True  
+    t = Thread(target=run)
+    r = Thread(target=ping, args=(target,debug,))
+    t.start()
+    r.start()
