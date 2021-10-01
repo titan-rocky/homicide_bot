@@ -142,7 +142,7 @@ async def on_member_join(member):
 	else:
 		return
 
-		await bot.get_channel(691292302580121693).send(f'Welcome, {member.mention}. Please Wait for the verification being processed to <@557914347490508806>')
+		await cl.get_channel(691292302580121693).send(f'Welcome, {member.mention}. Please Wait for the verification being processed to <@557914347490508806>')
 
 
 @cl.event
