@@ -25,7 +25,7 @@ class Moderation(commands.Cog):
 			if random.randint(0,4)==3:
 				await message.channel.send('<a:amaterasu:887033967264550912>')
 
-	@commands.commands
+	@commands.command()
 	@commands.has_role(self.mod_role_id)
 	async def purge(self,ctx:commands.Context,limit:int,*aa):
 		mb=await ctx.channel.purge(limit)
