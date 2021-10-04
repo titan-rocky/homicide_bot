@@ -7,14 +7,6 @@ class Moderation(commands.Cog):
 		self.bot=bot
 		self.mod_role_id=724532819166101565
 
-	def mod_check(self,ctx:discord.commands.Context):
-		b=ctx.author.role
-		if b==self.mod_role_id:
-			return true
-		else:
-			await ctx.send('You are Not Authorized Mate <a:sorry_mate:894514353762631681>')
-			return false
-
 
 	@commands.Cog.Listener
 	async def on_message(self,message:discord.Message):
@@ -34,10 +26,10 @@ class Moderation(commands.Cog):
 				await message.channel.send('<a:amaterasu:887033967264550912>')
 
 	@commands.commands
-	@commands.check(self.mod_check)
+	@commands.has_role(self.mod_role_id)
 	async def purge(self,ctx:commands.Context,limit:int,*aa):
 		mb=await ctx.channel.purge(limit)
-		finalmessage=awaitctx.send(f'{len(mb)} messages have been removed')
+		finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
 		await asyncio.sleep(5)
 		await finalmessage.delete()
 
