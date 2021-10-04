@@ -40,7 +40,7 @@ class Moderation(commands.Cog):
 	async def purge(self,ctx:commands.Context,limit:int,*aa):
 		print(limit)
 		if self.check_mod_roles(ctx):
-			mb=await ctx.channel.purge(limit)
+			mb=await ctx.channel.purge(limit=limit)
 			finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
 			await asyncio.sleep(5)
 			await finalmessage.delete()
