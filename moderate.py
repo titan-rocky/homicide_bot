@@ -24,7 +24,7 @@ class Moderation(commands.Cog):
 		if any(i.lower()=='amaterasu' or i.lower()=='itachi' for i in message.content.split(' ')):
 			if random.randint(0,4)==3:
 				await message.channel.send('<a:amaterasu:887033967264550912>')
-		
+
 
 	@commands.command()
 	@commands.has_role(724532819166101565)
@@ -33,5 +33,10 @@ class Moderation(commands.Cog):
 		finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
 		await asyncio.sleep(5)
 		await finalmessage.delete()
+
+	@commands.Cog.listener()
+	async def on_command_errror(error,ctx:commands.Contaxt):
+		if error==discord.ext.commands.errors.MissingRole:
+			await ctx.send(f'You dont have Permissions to Moderate , Mate <a:sorry_mate:894514353762631681>')
 
 
