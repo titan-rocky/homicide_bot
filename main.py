@@ -297,7 +297,7 @@ async def help(ctx):
 	gg=cl.commands
 	for i in gg:
 		print(i.name,i.description)
-		em.add_field(name=i.name,value=i.description)
+		em.add_field(name=i.name,value=f'**({i.cog_name})**i.description')
 	em.set_footer(text=f'Requested by {ctx.author.display_name}')
 	await ctx.send(embed=em)
 
