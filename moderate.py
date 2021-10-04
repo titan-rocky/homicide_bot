@@ -8,7 +8,7 @@ class Moderation(commands.Cog):
 		self.mod_role_id=724532819166101565
 
 	def check_mod_roles(self,ctx):
-		b=ctx.author.roles;b=[i.id for i in roles]
+		b=ctx.author.roles;b=[i.id for i in b]
 		if self.mod_role_id in b:
 			return True
 		else:
