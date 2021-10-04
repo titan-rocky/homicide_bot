@@ -11,6 +11,8 @@ class Moderation(commands.Cog):
 		b=ctx.author.roles;b=[i.id for i in b]
 		if self.mod_role_id in b:
 			return True
+		elif ctx.author.id==ctx.guild.owner_id:
+			return True
 		else:
 			return False
 
