@@ -42,7 +42,8 @@ class Moderation(commands.Cog):
 			await asyncio.sleep(5)
 			await finalmessage.delete()
 		else:
-			await ctx.send(f'You dont have Permissions to Moderate , Mate <a:sorry_mate:894514353762631681>')
+			await ctx.send(f'You dont have Permissions to Moderate Mate !')
+			await ctx.send('<a:sorry_mate:894514353762631681>')
 
 
 			
