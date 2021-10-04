@@ -224,6 +224,7 @@ async def purge(ctx,*args):
 	'''
 @cl.command(help='To get some Tips of Brawl Stars')
 async def tip(ctx):
+	'''To Get a Random Tip For Brawl Stars, Btw I am not a pro'''
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	tiplist=[
 	'**Shelly in BrawlBall :** \nwith super activated,  while shooting the ball towards walls near goal box , use your super to break walls and it goes into goal box. GOAL!!! the enemies will leave , thinking that walls will prevent the goal',
@@ -304,7 +305,7 @@ async def help(ctx):
 
 		print(i.name,type(i.signature),i.description)
 		c=i.signature.find('[description=')
-		print(c)
+		print(c,type(c))
 		d=i.signature[c,]
 		em.add_field(name=bv,value=f'**({i.cog_name})**{i.signature}')
 	em.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
