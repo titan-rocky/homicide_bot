@@ -11,7 +11,7 @@ class AutoResponse(commands.Cog):
 
 
 	@commands.Cog.listener()
-	async def on_message(message):
+	async def on_message(self,message):
 		#game-records
 		if message.channel==self.gamerec_ch:
 			for i in ['new map!','new map !']:
