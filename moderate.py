@@ -35,7 +35,7 @@ class Moderation(commands.Cog):
 		await finalmessage.delete()
 
 	@commands.Cog.listener()
-	async def on_command_errror(error,ctx:commands.Contaxt):
+	async def on_command_errror(error,ctx:commands.Context):
 		if error==discord.ext.commands.errors.MissingRole:
 			await ctx.send(f'You dont have Permissions to Moderate , Mate <a:sorry_mate:894514353762631681>')
 
