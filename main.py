@@ -183,8 +183,9 @@ async def on_command(ctx):
 	await cl.get_channel(750581846143664169).send(embed=dd)
 '''
 	    
-@cl.command(help='Say hi to the bot')
+@cl.command()
 async def hi(ctx):
+	'''Say hi to the bot'''
 	print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 	if str(ctx.author.id)=='557914347490508806':
 		await ctx.channel.send('A Warm Welcome, *Hon\'ble* **Lord Chief**')
