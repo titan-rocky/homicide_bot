@@ -16,6 +16,7 @@ from alive import awake
 import moderate
 import disbsint
 import pytz
+import autores
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
@@ -38,6 +39,7 @@ homicrew_channels={'general':691292302580121693}
 inn=discord.Intents.all()
 cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW',intents=inn,case_insensitive=True)
 cl.add_cog(moderate.Moderation(cl))
+cl.add_cog(autores.AutoResponse(cl))
 cl.remove_command('help')
 
 @tasks.loop(seconds=60)
