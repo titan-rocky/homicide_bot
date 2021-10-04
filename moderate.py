@@ -7,6 +7,14 @@ class Moderation(commands.Cog):
 		self.bot=bot
 		self.mod_role_id=724532819166101565
 
+	def check_mod_roles(self,ctx):
+		b=ctx.author.roles;b=[i.id for i in roles]
+		if self.mod_role_id in b:
+			return True
+		else:
+			return False
+
+
 
 	@commands.Cog.listener()
 	async def on_message(self,message:discord.Message):
@@ -27,17 +35,16 @@ class Moderation(commands.Cog):
 
 
 	@commands.command()
-	@commands.has_role(724532819166101565)
 	async def purge(self,ctx:commands.Context,limit:int,*aa):
-		mb=await ctx.channel.purge(limit)
-		finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
-		await asyncio.sleep(5)
-		await finalmessage.delete()
-
-	@commands.Cog.listener()
-	async def on_command_errror(error,ctx:commands.Context):
-		print(error)
-		if error==discord.ext.commands.errors.MissingRole:
+		if self.check_mod_roles(ctx):
+			mb=await ctx.channel.purge(limit)
+			finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
+			await asyncio.sleep(5)
+			await finalmessage.delete()
+		else:
 			await ctx.send(f'You dont have Permissions to Moderate , Mate <a:sorry_mate:894514353762631681>')
+
+
+			
 
 
