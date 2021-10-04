@@ -318,7 +318,7 @@ async def help(ctx,description='Show this Message'):
 			d=i.signature[c+13:len(i.signature)-1]
 		else:
 			d='No Description'
-		em.add_field(name=i.name,value=f'**({bv})**\n{d}')
+		em.add_field(name=i.name,value=f'**({bv})**\n{d}',inline=True)
 	em.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
 	em.set_footer(text=f'Requested by {ctx.author.display_name}')
 	await ctx.send(embed=em)
