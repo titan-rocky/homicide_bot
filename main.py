@@ -247,8 +247,9 @@ async def tip(ctx):
 	await ctx.send(embed=e)
 
 
-@cl.command(help='To get some Jokes')
-async def joke(ctx,):
+@cl.command()
+async def joke(ctx):
+	'''To Get a Random Joke'''
 	key='48b118eb9fmsh14b40e42d9ce1dbp12fa75jsn96de5dd96942'
 	url = "https://jokeapi-v2.p.rapidapi.com/joke/Any"
 	querystring = {"format":"json","blacklistFlags":"nsfw,religious,political,racist,sexist,explicit","safe-mode":"true"}
@@ -301,8 +302,8 @@ async def help(ctx):
 		else:
 			bv=i.name
 
-		print(i.name,i.description)
-		em.add_field(name=bv,value=f'**({i.cog_name})**{i.description}')
+		print(i.name,i.signature)
+		em.add_field(name=bv,value=f'**({i.cog_name})**{i.signature}')
 	em.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
 	em.set_footer(text=f'Requested by {ctx.author.display_name}')
 	await ctx.send(embed=em)
