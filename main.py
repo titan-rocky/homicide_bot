@@ -37,7 +37,7 @@ homicrew_channels={'general':691292302580121693}
 
 inn=discord.Intents.all()
 cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW',intents=inn,case_insensitive=True)
-
+cl.add_cog(Moderation)
 
 @tasks.loop(seconds=60)
 async def gud_mor():
@@ -55,7 +55,7 @@ async def on_ready():
 	print('I am Ready')
 	await cl.change_presence(status=discord.Status.idle,activity=discord.Game(name="Shockers with Positive Feedback",assets={'large_image_url':'https://cdn.discordapp.com/attachments/737942309173329985/886997742252081212/PicsArt_09-11-10.29.55.jpg','large_text':'sdghsdh'}))
 	gud_mor.start()
-	cl.add_cog(Moderation)
+
 	#(status=discord.Status.idle,activity=discord.Streaming(name="Leagen Returns",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Leagen Returns',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
 	#await cl.change_presence(activity=discord.Streaming(name="Black Flames",url='https://www.twitch.tv/titan_rocky')
 	
