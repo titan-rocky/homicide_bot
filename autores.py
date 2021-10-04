@@ -14,7 +14,7 @@ class AutoResponse(commands.Cog):
 	async def on_message(message):
 		#game-records
 		if message.channel==self.gamerec_ch:
-			for i in ['new map!','new map !']
+			for i in ['new map!','new map !']:
 				if message.content.lower().startswith(i):
 					em1=discord.Partialemoji()
 					await message.add_reaction(em1.from_str('<a:upvote:894641763417981029>'))
