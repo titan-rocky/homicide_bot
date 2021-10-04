@@ -298,7 +298,7 @@ async def help(ctx,description='Show this Message'):
 	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
 	gg=cl.commands
 	for i in gg:
-		if not i.name or i.name='None':
+		if not i.name or i.name=='None':
 			bv='General'
 		else:
 			bv=i.name
