@@ -295,7 +295,8 @@ async def help(ctx):
 	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
 	gg=cl.commands
 	for i in gg:
-		em.add_field(name=i,value=i.description)
+		print(i.name,i.description)
+		em.add_field(name=i.name,value=i.description)
 	em.set_footer(text=f'Requested by {ctx.author.display_name}')
 	await ctx.send(embed=em)
 
