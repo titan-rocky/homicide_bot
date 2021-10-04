@@ -292,7 +292,7 @@ async def joke(ctx,):
 
 @cl.command()
 async def help(ctx):
-	em=discord.Embed(title='User Manual',col=0x40e0d0,description=f'List of Commands That can be used')
+	em=discord.Embed(title='User Manual',col=0xA0B6D0,description=f'List of Commands That can be used')
 	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
 	gg=cl.commands
 	for i in gg:
