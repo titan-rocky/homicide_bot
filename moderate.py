@@ -26,7 +26,7 @@ class Moderation(commands.Cog):
 				await message.channel.send('<a:amaterasu:887033967264550912>')
 
 	@commands.command()
-	@commands.has_role(self.mod_role_id)
+	@commands.has_role(724532819166101565)
 	async def purge(self,ctx:commands.Context,limit:int,*aa):
 		mb=await ctx.channel.purge(limit)
 		finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
