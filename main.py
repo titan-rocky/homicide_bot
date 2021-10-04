@@ -294,23 +294,20 @@ async def joke(ctx,description='To Get a Random Joke'):
 
 @cl.command()
 async def help(ctx,description='Show this Message'):
-	em=discord.Embed(title='User Manual',col=0xA0B6D0,description=f'Command.prefix : **{cl.command_prefix}**\nList of Commands That can be used :')
+	em=discord.Embed(title='User Manual',col=0xA0B6D0,description=f'Command.prefix : **"{cl.command_prefix}"**\nList of Commands That can be used :')
 	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
 	gg=cl.commands
+	print(i.name,type(i.name))
 	for i in gg:
 		if not i.name or i.name=='None':
 			bv='General'
 		else:
 			bv=i.name
-
-		print(i.name,type(i.signature),i.description)
 		c=i.signature.find('[description=')
-		print(c,type(c))
 		if c!=(-1):
 			d=i.signature[c+13:len(i.signature)-1]
-			print(d)
 		else:
-			d=''
+			d='No Description'
 		em.add_field(name=bv,value=f'**({i.cog_name})**\n{d}')
 	em.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
 	em.set_footer(text=f'Requested by {ctx.author.display_name}')
