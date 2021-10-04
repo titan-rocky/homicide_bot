@@ -38,6 +38,7 @@ class Moderation(commands.Cog):
 
 	@commands.command()
 	async def purge(self,ctx:commands.Context,limit:int,*aa):
+		print(limit)
 		if self.check_mod_roles(ctx):
 			mb=await ctx.channel.purge(limit)
 			finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
