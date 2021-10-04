@@ -297,7 +297,7 @@ async def help(ctx):
 		em.add_field(name=i,value=i.description)
 	em.set_footer(text=f'Requested by {ctx.author.display_name}')
 
-	await ctx.send(embed=em
+	await ctx.send(embed=em)
 
 
 
