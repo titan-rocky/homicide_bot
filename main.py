@@ -297,7 +297,8 @@ async def help(ctx):
 	gg=cl.commands
 	for i in gg:
 		print(i.name,i.description)
-		em.add_field(name=i.name,value=f'**({i.cog_name})**i.description')
+		em.add_field(name=i.name,value=f'**({i.cog_name})**{i.description}')
+	em.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
 	em.set_footer(text=f'Requested by {ctx.author.display_name}')
 	await ctx.send(embed=em)
 
