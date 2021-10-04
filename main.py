@@ -55,7 +55,7 @@ async def gud_mor():
 	elif b.startswith('18:00'):
 		await cl.change_presence(activity=discord.Listening(name="Megalovonia-Undertale", url='https://www.twitch.tv/titan_rocky'))
 	elif b.startswith('19:30'):
-		await cl.change_presence(activity=discord.Game(name="Brawl Stars")))
+		await cl.change_presence(activity=discord.Game(name="Brawl Stars"))
 
 
 @cl.event
