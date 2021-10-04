@@ -21,7 +21,7 @@ class AutoResponse(commands.Cog):
 			else:
 				await message.delete()	
 		#created-maps
-	elif message.channel=self.map_ch:
-		pass
+		elif message.channel=self.map_ch:
+			pass
 
 
