@@ -184,7 +184,7 @@ async def on_command(ctx):
 '''
 	    
 @cl.command()
-async def hi(ctx):
+async def hi(ctx,description='Say hi to the bot'):
 	'''Say hi to the bot'''
 	print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 	if str(ctx.author.id)=='557914347490508806':
@@ -223,7 +223,7 @@ async def purge(ctx,*args):
 
 	'''
 @cl.command(help='To get some Tips of Brawl Stars')
-async def tip(ctx):
+async def tip(ctx,description='To Get a Random Tip For Brawl Stars, Btw I am not a pro'):
 	'''To Get a Random Tip For Brawl Stars, Btw I am not a pro'''
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	tiplist=[
@@ -249,7 +249,7 @@ async def tip(ctx):
 
 
 @cl.command()
-async def joke(ctx):
+async def joke(ctx,description='To Get a Random Joke'):
 	'''To Get a Random Joke'''
 	key=os.environ['jokeapikey']
 	url = "https://jokeapi-v2.p.rapidapi.com/joke/Any"
@@ -293,7 +293,7 @@ async def joke(ctx):
 
 
 @cl.command()
-async def help(ctx):
+async def help(ctx,description='Show this Message'):
 	em=discord.Embed(title='User Manual',col=0xA0B6D0,description=f'List of Commands That can be used')
 	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
 	gg=cl.commands
