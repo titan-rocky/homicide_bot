@@ -307,7 +307,8 @@ async def help(ctx):
 		c=i.signature.find('[description=')
 		print(c,type(c))
 		if c!=(-1):
-			d=i.signature[c:]
+			d=i.signature[c+13:]
+			print(d)
 		else:
 			d=''
 		em.add_field(name=bv,value=f'**({i.cog_name})**{i.signature}')
