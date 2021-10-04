@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import asyncio
 import disbsint
+import random
 
 class Moderation(commands.Cog):
 	def __init__(self,bot):
@@ -78,6 +79,7 @@ class Moderation(commands.Cog):
 			await ctx.send(f'You dont have Permissions to Moderate Mate !')
 			await ctx.send('<a:sorry_mate:894514353762631681>')
 
+	
 
 			
 
