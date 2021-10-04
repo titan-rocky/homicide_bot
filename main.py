@@ -297,8 +297,9 @@ async def help(ctx,description='Show this Message'):
 	em=discord.Embed(title='User Manual',color=0xA0B6D0,description=f'Command.prefix : **"{cl.command_prefix}"**\nList of Commands That can be used :')
 	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
 	gg=cl.commands
-	print(i.name,type(i.name))
+	
 	for i in gg:
+		print(i.name,type(i.name))
 		if not i.name or i.name=='None':
 			bv='General'
 		else:
