@@ -197,32 +197,6 @@ async def hi(ctx):
 		await ctx.send(f'A Warm Welcome , *Hon\'ble* **{ctx.author.display_name}** ')
 
 
-@cl.command()
-async def addid(ctx):
-	print(f'$addid requested by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
-	if str(ctx.author.id) in op_discord_id:
-		b=ctx.message.content
-		b=b.lstrip('belle addid ').split(' ')
-		print(b)
-		if len(b)>2:
-			await ctx.channel.send(f'{ctx.author.mention} , you can add only one entry')
-		elif len(b)!=2:
-			await ctx.channel.send(f'{ctx.author.mention} , Please give any entry')
-		elif len(b)==2:
-			await ctx.channel.send(f'{ctx.author.mention} , Please Confirm your request by typing \'confirm\' (case sensitive)')
-			def check(m):
-				return m.content=='confirm' and m.channel==ctx.channel
-
-			try:
-				msg=await cl.wait_for('message',check=check,timeout=30)
-			except asyncio.TimeoutError:
-				await ctx.channel.send(f'{ctx.author.mention} Your Request has been declined')
-			else:
-				disbsint.add_entry(b[0],b[1])
-				print(f'added {b[0]}:{b[1]} disbs.csv')
-				await ctx.channel.send(f'Added ID {b[0]} successfully !')
-	else:
-		await ctx.channel.send('You are not Authorized 😓')
 '''
 @cl.command()
 async def purge(ctx,*args):
@@ -247,7 +221,7 @@ async def purge(ctx,*args):
 
 	'''
 @cl.command()
-async def tip(ctx):
+async def tip(ctx,description='To get some Tips of Brawl Stars'):
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	tiplist=[
 	'**Shelly in BrawlBall :** \nwith super activated,  while shooting the ball towards walls near goal box , use your super to break walls and it goes into goal box. GOAL!!! the enemies will leave , thinking that walls will prevent the goal',
@@ -272,7 +246,7 @@ async def tip(ctx):
 
 
 @cl.command()
-async def joke(ctx):
+async def joke(ctx,description='To get some Jokes'):
 	key='48b118eb9fmsh14b40e42d9ce1dbp12fa75jsn96de5dd96942'
 	url = "https://jokeapi-v2.p.rapidapi.com/joke/Any"
 	querystring = {"format":"json","blacklistFlags":"nsfw,religious,political,racist,sexist,explicit","safe-mode":"true"}
@@ -317,8 +291,13 @@ async def joke(ctx):
 @cl.command()
 async def help(ctx):
 	em=discord.Embed(title='User Manual',col=0x40e0d0,description=f'List of Commands That can be used')
-	mb.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
-	mb.set_footer(text=f'Requested by {ctx.author.display_name}')
+	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
+	gg=cl.commands
+	for i in gg:
+		em.add_field(name=i.,value=i.description)
+	em.set_footer(text=f'Requested by {ctx.author.display_name}')
+
+	await ctx.send(embed=em)
 
 
 
