@@ -304,6 +304,7 @@ async def help(ctx):
 
 		print(i.name,type(i.signature),i.description)
 		c=i.signature.find('[description=')
+		print(c)
 		d=i.signature[c,]
 		em.add_field(name=bv,value=f'**({i.cog_name})**{i.signature}')
 	em.set_thumbnail(url='https://cdn.discordapp.com/attachments/692403681294811167/886114248709775411/PicsArt_09-11-10.30.19.jpg')
