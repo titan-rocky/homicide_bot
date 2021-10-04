@@ -299,8 +299,7 @@ async def help(ctx,description='Show this Message'):
 	gg=cl.commands
 	
 	for i in gg:
-		print(i.name,type(i.name))
-		if not i.name or i.name=='None':
+		if not i.cog_name or i.cog_name=='None':
 			bv='General'
 		else:
 			bv=i.name
