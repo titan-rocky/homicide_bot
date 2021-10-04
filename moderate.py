@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
+import disbsint
 
 class Moderation(commands.Cog):
 	def __init__(self,bot):
