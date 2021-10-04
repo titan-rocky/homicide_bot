@@ -29,7 +29,7 @@ class Moderation(commands.Cog):
 					await message.channel.send(f'{message.author.mention} Dont use Explicit words Here , you pile of poop 💩 !')
 		sad_words=['sadly','disappointed','sad','depressed','die','sorrow','unhappy','not feeling well']
 		if any (i in message.content.split(' ') for i in sad_words):
-			sad_aem=await cl.get_guild(887015707366277170).fetch_emoji(887024376917139506)
+			sad_aem=await self.bot.get_guild(887015707366277170).fetch_emoji(887024376917139506)
 			await message.add_reaction(sad_aem)
 		if any(i.lower()=='amaterasu' or i.lower()=='itachi' for i in message.content.split(' ')):
 			if random.randint(0,4)==3:
@@ -65,7 +65,7 @@ class Moderation(commands.Cog):
 					return m.content=='confirm' and m.channel==ctx.channel
 
 				try:
-					msg=await cl.wait_for('message',check=check,timeout=30)
+					msg=await self.bot.wait_for('message',check=check,timeout=30)
 				except asyncio.TimeoutError:
 					await ctx.channel.send(f'{ctx.author.mention} Your Request has been declined')
 				else:
