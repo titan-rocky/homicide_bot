@@ -303,7 +303,7 @@ async def help(ctx,description='Show this Message'):
 		if i.cog_name==None:
 			bv='General'
 		else:
-			bv=i.name
+			bv=i.cog_name
 		c=i.signature.find('[description=')
 		if c!=(-1):
 			d=i.signature[c+13:len(i.signature)-1]
