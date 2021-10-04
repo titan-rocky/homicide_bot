@@ -8,7 +8,7 @@ class Moderation(commands.Cog):
 		self.mod_role_id=724532819166101565
 
 
-	@commands.Cog.Listener
+	@commands.Cog.listener
 	async def on_message(self,message:discord.Message):
 		bad_word=['sunni','fuck','fak','junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga','sex','penis','vagina','pp']
 		words=message.content.split(' ')
