@@ -307,7 +307,7 @@ async def help(ctx,description='Show this Message'):
 		c=i.signature.find('[description=')
 		print(c,type(c))
 		if c!=(-1):
-			d=i.signature[c+13:len(i.signature)-2]
+			d=i.signature[c+13:len(i.signature)-1]
 			print(d)
 		else:
 			d=''
