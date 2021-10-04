@@ -48,7 +48,7 @@ class Moderation(commands.Cog):
 			await ctx.send(f'You dont have Permissions to Moderate Mate !')
 			await ctx.send('<a:sorry_mate:894514353762631681>')
 
-	@cl.command()
+	@commands.command()
 	async def addid(self,ctx,description='Discord-BS integration'):
 		print(f'$addid requested by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 		if self.check_mod_roles(ctx):
