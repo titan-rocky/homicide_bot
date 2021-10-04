@@ -37,13 +37,41 @@ class Moderation(commands.Cog):
 
 
 	@commands.command()
-	async def purge(self,ctx:commands.Context,limit:int,*aa):
+	async def purge(self,ctx:commands.Context,description='Bulk Delete Messages',limit:int,*aa):
 		print(limit)
 		if self.check_mod_roles(ctx):
-			mb=await ctx.channel.purge(limit=limit)
+			mb=await ctx.channel.purge(limit=limit+1)
 			finalmessage=awaitctx.send(f'{len(mb)} messages have been removed <a:success:894520030404948009>')
 			await asyncio.sleep(5)
 			await finalmessage.delete()
+		else:
+			await ctx.send(f'You dont have Permissions to Moderate Mate !')
+			await ctx.send('<a:sorry_mate:894514353762631681>')
+
+	@cl.command()
+	async def addid(self,ctx,description='Discord-BS integration'):
+		print(f'$addid requested by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
+		if self.check_mod_roles(ctx):
+			b=ctx.message.content
+			b=b.lstrip('belle addid ').split(' ')
+			print(b)
+			if len(b)>2:
+				await ctx.channel.send(f'{ctx.author.mention} , you can add only one entry')
+			elif len(b)!=2:
+				await ctx.channel.send(f'{ctx.author.mention} , Please give any entry')
+			elif len(b)==2:
+				await ctx.channel.send(f'{ctx.author.mention} , Please Confirm your request by typing \'confirm\' (case sensitive)')
+				def check(m):
+					return m.content=='confirm' and m.channel==ctx.channel
+
+				try:
+					msg=await cl.wait_for('message',check=check,timeout=30)
+				except asyncio.TimeoutError:
+					await ctx.channel.send(f'{ctx.author.mention} Your Request has been declined')
+				else:
+					disbsint.add_entry(b[0],b[1])
+					print(f'added {b[0]}:{b[1]} disbs.csv')
+					await ctx.channel.send(f'Added ID {b[0]} successfully !')
 		else:
 			await ctx.send(f'You dont have Permissions to Moderate Mate !')
 			await ctx.send('<a:sorry_mate:894514353762631681>')
