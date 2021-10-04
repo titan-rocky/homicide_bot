@@ -24,6 +24,7 @@ class Moderation(commands.Cog):
 		if any(i.lower()=='amaterasu' or i.lower()=='itachi' for i in message.content.split(' ')):
 			if random.randint(0,4)==3:
 				await message.channel.send('<a:amaterasu:887033967264550912>')
+		
 
 	@commands.command()
 	@commands.has_role(724532819166101565)

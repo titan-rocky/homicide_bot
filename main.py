@@ -72,7 +72,7 @@ async def on_message(message):
 	if cl.user.mentioned_in(message):
 		look_aem=await cl.get_guild(887015707366277170).fetch_emoji(887016423854059520)
 		await message.add_reaction(look_aem)
-
+	'''
 	bad_word=['sunni','fuck','fak','junni','poinda','Pointhe','Pointha','kudhi','kuthi','Tavethiya','nigga','sex','penis','vagina','pp']
 	words=message.content.split(' ')
 	for i in words:
@@ -87,7 +87,7 @@ async def on_message(message):
 	if any(i.lower()=='amaterasu' or i.lower()=='itachi' for i in message.content.split(' ')):
 		if random.randint(0,4)==3:
 			await message.channel.send('<a:amaterasu:887033967264550912>')
-
+	'''
 	if isinstance(message.channel,discord.channel.DMChannel) and message.author != cl.user:
 		await message.channel.send('This is a DM , commands only work on HOMICIDE_CREW server')
 		return
@@ -223,7 +223,7 @@ async def addid(ctx):
 				await ctx.channel.send(f'Added ID {b[0]} successfully !')
 	else:
 		await ctx.channel.send('You are not Authorized 😓')
-
+'''
 @cl.command()
 async def purge(ctx,*args):
 	print(args)
@@ -245,7 +245,7 @@ async def purge(ctx,*args):
 			else:
 				await ctx.send('You are Not Authorized !')
 
-
+	'''
 @cl.command()
 async def tip(ctx):
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
