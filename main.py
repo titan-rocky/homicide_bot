@@ -13,7 +13,7 @@ import json
 from datetime import datetime
 import csv
 from alive import awake
-from moderate import Moderation
+import moderate
 import disbsint
 import pytz
 
@@ -37,7 +37,7 @@ homicrew_channels={'general':691292302580121693}
 
 inn=discord.Intents.all()
 cl=commands.Bot(command_prefix='belle ',description='Dedicated for HOMICIDE_CREW',intents=inn,case_insensitive=True)
-cl.add_cog(Moderation)
+cl.add_cog(moderate.Moderation(bot))
 
 @tasks.loop(seconds=60)
 async def gud_mor():
