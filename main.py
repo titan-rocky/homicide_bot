@@ -183,7 +183,7 @@ async def on_command(ctx):
 	await cl.get_channel(750581846143664169).send(embed=dd)
 '''
 	    
-@cl.command()
+@cl.command(help='Say hi to the bot')
 async def hi(ctx):
 	print(f'$hi by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 	if str(ctx.author.id)=='557914347490508806':
@@ -221,8 +221,8 @@ async def purge(ctx,*args):
 				await ctx.send('You are Not Authorized !')
 
 	'''
-@cl.command()
-async def tip(ctx,description='To get some Tips of Brawl Stars'):
+@cl.command(help='To get some Tips of Brawl Stars')
+async def tip(ctx):
 	col=[0xf8b195,0xf67280,0xc06c84,0x6c5b7b,0x355c7d]
 	tiplist=[
 	'**Shelly in BrawlBall :** \nwith super activated,  while shooting the ball towards walls near goal box , use your super to break walls and it goes into goal box. GOAL!!! the enemies will leave , thinking that walls will prevent the goal',
@@ -246,8 +246,8 @@ async def tip(ctx,description='To get some Tips of Brawl Stars'):
 	await ctx.send(embed=e)
 
 
-@cl.command()
-async def joke(ctx,description='To get some Jokes'):
+@cl.command(help='To get some Jokes')
+async def joke(ctx,):
 	key='48b118eb9fmsh14b40e42d9ce1dbp12fa75jsn96de5dd96942'
 	url = "https://jokeapi-v2.p.rapidapi.com/joke/Any"
 	querystring = {"format":"json","blacklistFlags":"nsfw,religious,political,racist,sexist,explicit","safe-mode":"true"}
