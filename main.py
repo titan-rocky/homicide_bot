@@ -314,6 +314,12 @@ async def joke(ctx):
 
 
 
+@cl.command()
+async def help(ctx):
+	em=discord.Embed(title='User Manual',col=0x40e0d0,description=f'List of Commands That can be used')
+	mb.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
+	mb.set_footer(text=f'Requested by {ctx.author.display_name}')
+
 
 
 awake('https://ufaiosfoisdhklgvhsdl.umedyostertho.repl.co')
