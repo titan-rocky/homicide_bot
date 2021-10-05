@@ -48,14 +48,14 @@ async def gud_mor():
 	b=indtime.strftime('%H:%M:%S')
 	if b.startswith('23:30'):
 		await cl.get_channel(homicrew_channels['general']).send('Good Night Everyone <a:sleepsandy:887379970769436732>')
-		await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="😴 Sleeping Is Important"))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="😴 Sleeping Is Important",url='https://www.twitch.tv/titan_rocky'))
 	elif b.startswith('06:00'):
 		await cl.get_channel(homicrew_channels['general']).send('Good Morning Everyone <a:bibigg:887380758795288577>')
-		await cl.change_presence(status=discord.Status.idle,activity=discord.Watching(name='People Saying GM'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.Watching(name='People Saying GM'))
 	elif b.startswith('12:00'):
-		await cl.change_presence(status=discord.Status.idle,activity=discord.Watching(name='Naruto\'s Comeback'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.Watching(name='President Naruto\'s Comeback'))
 	elif b.startswith('18:00'):
-		await cl.change_presence(activity=discord.Listening(name="Megalovonia-Undertale", url='https://www.twitch.tv/titan_rocky'))
+		await cl.change_presence(activity=discord.ActivityType.Listening(name="Megalovonia-Undertale", url='https://www.twitch.tv/titan_rocky'))
 	elif b.startswith('19:30'):
 		await cl.change_presence(activity=discord.Game(name="Brawl Stars"))
 
@@ -304,7 +304,7 @@ async def joke(ctx,description='To Get a Random Joke'):
 @cl.command()
 async def help(ctx,description='Show this Message'):
 	em=discord.Embed(title='User Manual',color=0xA0B6D0,description=f'Command.prefix : **"{cl.command_prefix}"**\nList of Commands That can be used :')
-	em.set_author(name='ModerBellator, The AutoModerator Of Homicide Crew')
+	em.set_author(name='ModerBellator Has Been Summoned !')
 	gg=cl.commands
 	
 	for i in gg:

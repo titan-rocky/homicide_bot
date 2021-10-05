@@ -39,8 +39,12 @@ class Moderation(commands.Cog):
 
 
 	@commands.command()
-	async def purge(self,ctx:commands.Context,limit:int,*aa,description='Bulk Delete Messages'):
+	async def purge(self,ctx:commands.Context,*aa,description='Bulk Delete Messages'):
 		'''To Delete Bulk Messages'''
+		try:
+			limit=int(aa[0])
+		except ValueError:
+			await ctx.send(f'Provide a Valid Integer ! {ctx.author.mention}')
 		print(limit)
 		if self.check_mod_roles(ctx):
 			mb=await ctx.channel.purge(limit=limit+1)
