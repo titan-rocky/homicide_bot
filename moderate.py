@@ -39,12 +39,13 @@ class Moderation(commands.Cog):
 
 
 	@commands.command()
-	async def purge(self,ctx:commands.Context,*aa,description='Bulk Delete Messages'):
+	async def purge(self,ctx:commands.Context,*aa,description='Bulk Delete Messages\nArgs : limit(+integer)'):
 		'''To Delete Bulk Messages'''
 		try:
 			limit=int(aa[0])
 		except ValueError:
 			await ctx.send(f'Provide a Valid Integer ! {ctx.author.mention}')
+			limit=0
 		print(limit)
 		if self.check_mod_roles(ctx):
 			mb=await ctx.channel.purge(limit=limit+1)
@@ -56,7 +57,7 @@ class Moderation(commands.Cog):
 			await ctx.send('<a:sorry_mate:894514353762631681>')
 
 	@commands.command()
-	async def addid(self,ctx,description='Discord-BS integration'):
+	async def addid(self,ctx,description='Discord-BS integration\nArgs : discord-id bs-tag'):
 		print(f'$addid requested by {ctx.author.name}#{ctx.author.discriminator} id {ctx.author.id}')
 		if self.check_mod_roles(ctx):
 			b=ctx.message.content
