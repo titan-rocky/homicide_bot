@@ -45,7 +45,8 @@ class Moderation(commands.Cog):
 			limit=int(aa[0])
 		except ValueError:
 			await ctx.send(f'Provide a Valid Integer ! {ctx.author.mention}')
-			return limit=0
+			limit=0
+			return
 		print(limit)
 		if self.check_mod_roles(ctx):
 			mb=await ctx.channel.purge(limit=limit+1)
