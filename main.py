@@ -51,11 +51,11 @@ async def gud_mor():
 		await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="😴 Sleeping Is Important",url='https://www.twitch.tv/titan_rocky'))
 	elif b.startswith('06:00'):
 		await cl.get_channel(homicrew_channels['general']).send('Good Morning Everyone <a:bibigg:887380758795288577>')
-		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.Watching(name='People Saying GM'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.watching(name='People Saying GM'))
 	elif b.startswith('12:00'):
-		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.Watching(name='President Naruto\'s Comeback'))
-	elif b.startswith('18:00'):
-		await cl.change_presence(activity=discord.ActivityType.Listening(name="Megalovonia-Undertale", url='https://www.twitch.tv/titan_rocky'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.watching(name='President Naruto\'s Comeback'))
+	elif b.startswith('12:06'):
+		await cl.change_presence(activity=discord.ActivityType.listening(name="Megalovonia-Undertale", url='https://open.spotify.com/track/1J03Vp93ybKIxfzYI4YJtL'))
 	elif b.startswith('19:30'):
 		await cl.change_presence(activity=discord.Game(name="Brawl Stars"))
 
