@@ -55,7 +55,7 @@ async def gud_mor():
 	elif b.startswith('12:00'):
 		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.watching(name='President Naruto\'s Comeback'))
 	elif b.startswith('12:06'):
-		await cl.change_presence(activity=discord.ActivityType.listening(name="Megalovonia-Undertale", url='https://open.spotify.com/track/1J03Vp93ybKIxfzYI4YJtL'))
+		await cl.change_presence(activity=discord.Spotify(track_id='1J03Vp93ybKIxfzYI4YJtL'))
 	elif b.startswith('19:30'):
 		await cl.change_presence(activity=discord.Game(name="Brawl Stars"))
 
