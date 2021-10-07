@@ -20,7 +20,9 @@ class AutoResponse(commands.Cog):
 					em2=self.bot.get_emoji(894641763417981029)
 					em3=self.bot.get_emoji(894641763640307732)
 					await message.add_reaction(em1)
+					await asyncio.sleep(0.8)
 					await message.add_reaction(em2)
+					await asyncio.sleep(0.8)
 					await message.add_reaction(em3)
 					break
 			else:
@@ -32,6 +34,7 @@ class AutoResponse(commands.Cog):
 					em1=self.bot.get_emoji(894641763417981029)
 					em2=self.bot.get_emoji(894641763640307732)
 					await message.add_reaction(em1)
+					await asyncio.sleep(0.8)
 					await message.add_reaction(em2)
 					break
 			else:

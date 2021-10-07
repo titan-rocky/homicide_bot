@@ -48,15 +48,15 @@ async def gud_mor():
 	b=indtime.strftime('%H:%M:%S')
 	if b.startswith('23:30'):
 		await cl.get_channel(homicrew_channels['general']).send('Good Night Everyone <a:sleepsandy:887379970769436732>')
-		await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="😴 Sleeping Is Important",url='https://www.twitch.tv/titan_rocky'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.Streaming(name="😴 Sleeping Is Important",url='https://twitch.com/titan_rocky'))
 	elif b.startswith('06:00'):
 		await cl.get_channel(homicrew_channels['general']).send('Good Morning Everyone <a:bibigg:887380758795288577>')
-		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.watching(name='People Saying GM'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.Activity(type=discord.ActivityType.watching,name='People Saying GM'))
 	elif b.startswith('12:00'):
-		await cl.change_presence(status=discord.Status.idle,activity=discord.ActivityType.watching(name='President Naruto\'s Comeback'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.Activity(type=discord.ActivityType.watching,name='Naruto\'s Comeback'))
 	elif b.startswith('18:00'):
-		await cl.change_presence(activity=discord.ActivityType.listening(name='Megalovonia , by Toby Fox'))
-	elif b.startswith('19:30'):
+		await cl.change_presence(status=discord.Status.dnd,activity=discord.Activity(type=discord.ActivityType.listening,name="Megalovonia by Toby Fox"))
+	elif b.startswith('20:00'):
 		await cl.change_presence(activity=discord.Game(name="Brawl Stars"))
 
 
