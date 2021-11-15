@@ -49,7 +49,6 @@ class AutoResponse(commands.Cog):
 					await message.add_reaction(em1)
 					await asyncio.sleep(0.8)
 					await message.add_reaction(em2)
-					break
 			else:
 				await message.delete()	
 
