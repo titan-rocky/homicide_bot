@@ -8,6 +8,7 @@ class AutoResponse(commands.Cog):
 		self.bot=bot
 		self.gamerec_chid=737955923158368277
 		self.map_chid=769188270247510067
+		self.meme_chid=816180444227436574
 
 
 	@commands.Cog.listener()
@@ -38,6 +39,17 @@ class AutoResponse(commands.Cog):
 					await message.add_reaction(em2)
 					break
 			else:
-				await message.delete()	
+				await message.delete()
 
+		elif message.channel.id==self.meme_chid:
+			print(message.attachments)
+			if message.attachments:
+					em1=self.bot.get_emoji(698824614964363264)
+					em2=self.bot.get_emoji(739354948424302658)
+					await message.add_reaction(em1)
+					await asyncio.sleep(0.8)
+					await message.add_reaction(em2)
+					break
+			else:
+				await message.delete()	
 
