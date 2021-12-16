@@ -53,7 +53,7 @@ async def gud_mor():
 		await cl.get_channel(homicrew_channels['general']).send('Good Morning Everyone <a:bibigg:887380758795288577>')
 		await cl.change_presence(status=discord.Status.idle,activity=discord.Activity(type=discord.ActivityType.watching,name='People Saying GM'))
 	elif b.startswith('12:00'):
-		await cl.change_presence(status=discord.Status.idle,activity=discord.Activity(type=discord.ActivityType.watching,name='OP Frank <a:FrankHappy:920937781776240671>'))
+		await cl.change_presence(status=discord.Status.idle,activity=discord.Activity(type=discord.ActivityType.watching,name='OP Frank - The Irresistable Sponge'))
 	elif b.startswith('18:00'):
 		await cl.change_presence(status=discord.Status.dnd,activity=discord.Activity(type=discord.ActivityType.listening,name="Megalovonia by Toby Fox"))
 	elif b.startswith('20:00'):
