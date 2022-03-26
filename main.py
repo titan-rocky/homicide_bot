@@ -12,7 +12,7 @@ import requests
 import json
 from datetime import datetime
 import csv
-from alive import awake
+from alive import keep_alive
 import moderate
 import disbsint
 import pytz
@@ -324,7 +324,7 @@ async def help(ctx,description='Show this Message'):
 
 
 
-awake('https://ufaiosfoisdhklgvhsdl.umedyostertho.repl.co')
+keep_alive()
 
 token=os.environ['discord_token']
 cl.run(token)
