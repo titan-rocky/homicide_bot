@@ -20,6 +20,7 @@ import autores
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
+servers=[691292302580121690]
 
 def check_op(uid):
 	print(uid)
@@ -123,7 +124,7 @@ async def on_message_delete(message):
 async def on_member_join(member):
 	now=datetime.now(pytz.timezone('Asia/Calcutta'))
 	col=[0x99b898,0xfecea8,0xff847c,0xea485f]
-	if not member.bot:
+	if not member.bot and member.guild.id in servers:
 		ch=cl.get_channel(691292302580121693)  #homicide crew general chat id
 		cdx=now.strftime('%d %B,%Y')
 		e=discord.Embed(title='HOMICIDE:skull_crossbones:CREW',color=random.choice(col),url='https://cdn.discordapp.com/attachments/737942309173329985/737973140361183232/JPEG_20200323_145525_cropped.jpg',description='You Have joined our Discord Server ó‿ó')
@@ -159,16 +160,17 @@ async def on_member_join(member):
 @cl.event
 async def on_member_remove(member):
 	col=0xF67280
-	ch2=cl.get_channel(889112863103418378)
-	e2=discord.Embed(title='A Member has Left our Family',color=col,description='a state of depression and sorrow')
-	mob=datetime.now(pytz.timezone('Asia/Calcutta'))
-	dat=mob.strftime('%d %b, %Y - %I:%M %p')
-	e2.set_author(name=f'{member.name} #{member.discriminator}')
-	e2.add_field(name=f'Its sad to see you leave this server',value=f'Left on {dat}\n',inline=True)
-	e2.set_thumbnail(url=member.avatar_url)
+	if not member.bot and member.guild.id in servers:
+		ch2=cl.get_channel(889112863103418378)
+		e2=discord.Embed(title='A Member has Left our Family',color=col,description='a state of depression and sorrow')
+		mob=datetime.now(pytz.timezone('Asia/Calcutta'))
+		dat=mob.strftime('%d %b, %Y - %I:%M %p')
+		e2.set_author(name=f'{member.name} #{member.discriminator}')
+		e2.add_field(name=f'Its sad to see you leave this server',value=f'Left on {dat}\n',inline=True)
+		e2.set_thumbnail(url=member.avatar_url)
 
-	e2.set_footer(text=f'Poor Club !',icon_url='https://media.discordapp.net/attachments/737942309173329985/889123885834981416/322-3224005_unemployment-clip-art.png')
-	await ch2.send(embed=e2)
+		e2.set_footer(text=f'Poor Club !',icon_url='https://media.discordapp.net/attachments/737942309173329985/889123885834981416/322-3224005_unemployment-clip-art.png')
+		await ch2.send(embed=e2)
 
 '''
 @cl.event
