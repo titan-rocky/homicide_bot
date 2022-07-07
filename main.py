@@ -21,6 +21,7 @@ import autores
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
 servers=[691292302580121690]
+resource_server[887015707366277170]
 
 def check_op(uid):
 	print(uid)
@@ -73,10 +74,10 @@ async def on_ready():
 	embed_m1.set_footer(text=f'Please select the roles with consent , don\'t report for pinging later')
 	embed_m1.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/994507718700322966/pngwing.com.png')
 	m1b=await cl.get_channel(994495593856651334).send(embed=embed_m1)
-	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994510214109859860))
-	await m1b.add_reaction(994510217716961380)
-	await m1b.add_reaction(994510643677900810)
-	await m1b.add_reaction(994510207390580757)
+	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510214109859860))
+	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510217716961380))
+	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510643677900810))
+	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510207390580757))
 
 
 	#temp ends
