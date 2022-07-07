@@ -71,7 +71,7 @@ class AutoResponse(commands.Cog):
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
-					await payload.member.add_roles(self.homi_roledict[role_emote[i]])
+					await payload.member.add_roles(await self.bot.get_guild(resource_server[0]).fetch_emoji(self.homi_roledict[role_emote[i]]))
 
 	@commands.Cog.listener()
 	async def on_raw_reaction_remove(self,payload):
@@ -79,7 +79,7 @@ class AutoResponse(commands.Cog):
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
-					await payload.member.remove_roles(self.homi_roledict[role_emote[i]])
+					await payload.member.remove_roles(await self.bot.get_guild(resource_server[0]).fetch_emoji(self.homi_roledict[role_emote[i]]))
 
 	
 
