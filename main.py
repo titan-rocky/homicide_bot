@@ -72,7 +72,7 @@ async def on_ready():
 	embed_m1.add_field(name=f'Added Game Roles : ',value='<:bs:994510214109859860> : <@&992616272640618526>/n<:coc:994510217716961380> : <@&992616363971596370>/n<:cr:994510643677900810> : <@&992616443361378304>/n<:mc:994510207390580757> : <@&992616012841222144>/n',inline=True)
 	embed_m1.set_footer(text=f'Please select the roles with consent , don\'t report for pinging later')
 	embed_m1.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/994507718700322966/pngwing.com.png')
-	awaitbot.get_channel(994495593856651334).send(embed=embed_m1)
+	await bot.get_channel(994495593856651334).send(embed=embed_m1)
 
 	#temp ends
 	gud_mor.start()
