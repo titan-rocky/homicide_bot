@@ -12,7 +12,7 @@ class AutoResponse(commands.Cog):
 		self.art_chid=992054563064533075
 		self.selfrole_chid=994495593856651334
 		self.homi_roledict={'bs':992616272640618526,'coc':992616363971596370,'cr':992616443361378304,'mc':992616012841222144}
-		self.servers=[await self.bot.get_guild(691292302580121690)]
+		self.servers=[691292302580121690]
 		self.resource_server=[887015707366277170]
 
 
@@ -70,18 +70,20 @@ class AutoResponse(commands.Cog):
 	@commands.Cog.listener()
 	async def on_raw_reaction_add(self,payload):
 		role_emote={994525504055033946:'bs',994525508215771186:'coc',994525497620959323:'cr',994525499835564042:'mc'}
+		linkserver=await self.bot.get_guild(self.servers[0])
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
-					await payload.member.add_roles(servers[0].get_role(self.homi_roledict[role_emote[i]]))
+					await payload.member.add_roles(linkserver.get_role(self.homi_roledict[role_emote[i]]))
 
 	@commands.Cog.listener()
 	async def on_raw_reaction_remove(self,payload):
+		linkserver=await self.bot.get_guild(self.servers[0])
 		role_emote={994525504055033946:'bs',994525508215771186:'coc',994525497620959323:'cr',994525499835564042:'mc'}
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
-					await payload.member.remove_roles(servers[0].get_role(self.homi_roledict[role_emote[i]]))
+					await payload.member.remove_roles(linkserver.get_role(self.homi_roledict[role_emote[i]]))
 
 	
 
