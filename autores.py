@@ -69,19 +69,19 @@ class AutoResponse(commands.Cog):
 			
 	@commands.Cog.listener()
 	async def on_raw_reaction_add(self,payload):
-		role_emote={994510214109859860:'bs',994510217716961380:'coc',994510643677900810:'cr',994510207390580757:'mc'}
+		role_emote={994525504055033946:'bs',994525508215771186:'coc',994525497620959323:'cr',994525499835564042:'mc'}
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
-					await payload.member.add_roles(await self.bot.get_guild(self.resource_server[0]).fetch_emoji(self.homi_roledict[role_emote[i]]))
+					await payload.member.add_roles(await self.bot.get_guild(self.servers[0]).fetch_emoji(self.homi_roledict[role_emote[i]]))
 
 	@commands.Cog.listener()
 	async def on_raw_reaction_remove(self,payload):
-		role_emote={994510214109859860:'bs',994510217716961380:'coc',994510643677900810:'cr',994510207390580757:'mc'}
+		role_emote={994525504055033946:'bs',994525508215771186:'coc',994525497620959323:'cr',994525499835564042:'mc'}
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
-					await payload.member.remove_roles(await self.bot.get_guild(self.resource_server[0]).fetch_emoji(self.homi_roledict[role_emote[i]]))
+					await payload.member.remove_roles(await self.bot.get_guild(self.servers[0]).fetch_emoji(self.homi_roledict[role_emote[i]]))
 
 	
 

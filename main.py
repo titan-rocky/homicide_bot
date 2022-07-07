@@ -71,14 +71,14 @@ async def on_ready():
 	embed_m1_desc='Select the roles of Games you play , so that ya will be pinged regarding events and other info'
 	embed_m1=discord.Embed(color=0x03ecfc,title="Game Roles",description=embed_m1_desc)
 	embed_m1.set_author(name='🥇Self Roles')
-	embed_m1.add_field(name=f'Added Game Roles : ',value='<:bs:994510214109859860> : <@&992616272640618526> \n <:coc:994510217716961380> : <@&992616363971596370> \n <:cr:994510643677900810> : <@&992616443361378304> \n <:mc:994510207390580757> : <@&992616012841222144> \n ',inline=True)
+	embed_m1.add_field(name=f'Added Game Roles : ',value='<:bs:994525504055033946> : <@&992616272640618526> \n <:coc:994525508215771186> : <@&992616363971596370> \n <:cr:994510643677900810> : <@&992616443361378304> \n <:mc:994525499835564042> : <@&992616012841222144> \n ',inline=True)
 	embed_m1.set_footer(text=f'Please select the roles with consent , don\'t report for pinging later')
 	embed_m1.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/994507718700322966/pngwing.com.png')
 	m1b=await cl.get_channel(994495593856651334).send(embed=embed_m1)
-	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510214109859860))
-	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510217716961380))
-	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510643677900810))
-	await m1b.add_reaction(await cl.get_guild(resource_server[0]).fetch_emoji(994510207390580757))
+	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994525504055033946))
+	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994525508215771186))
+	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994525497620959323))
+	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994525499835564042))
 
 
 	#temp ends
