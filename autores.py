@@ -68,7 +68,7 @@ class AutoResponse(commands.Cog):
 	@commands.Cog.listener()
 	async def on_raw_reaction_add(self,payload):
 		role_emote={994510214109859860:'bs',994510217716961380:'coc',994510643677900810:'cr',994510207390580757:'mc'}
-		if payload.channel_id==self.selfrole_chid:
+		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
 					payload.member.add_roles(homi_roledict[role_emote[i]])
@@ -76,7 +76,7 @@ class AutoResponse(commands.Cog):
 	@commands.Cog.listener()
 	async def on_raw_reaction_remove(self,payload):
 		role_emote={994510214109859860:'bs',994510217716961380:'coc',994510643677900810:'cr',994510207390580757:'mc'}
-		if payload.channel_id==self.selfrole_chid:
+		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
 					payload.member.remove_roles(homi_roledict[role_emote[i]])
