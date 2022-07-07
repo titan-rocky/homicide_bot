@@ -73,7 +73,7 @@ async def on_ready():
 	embed_m1.set_footer(text=f'Please select the roles with consent , don\'t report for pinging later')
 	embed_m1.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/994507718700322966/pngwing.com.png')
 	m1b=await cl.get_channel(994495593856651334).send(embed=embed_m1)
-	await m1b.add_reaction(994510214109859860)
+	await m1b.add_reaction(cl.get_guild(servers[0]).fetch_emoji(994510214109859860))
 	await m1b.add_reaction(994510217716961380)
 	await m1b.add_reaction(994510643677900810)
 	await m1b.add_reaction(994510207390580757)
