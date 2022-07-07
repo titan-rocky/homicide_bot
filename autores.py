@@ -70,7 +70,7 @@ class AutoResponse(commands.Cog):
 	@commands.Cog.listener()
 	async def on_raw_reaction_add(self,payload):
 		role_emote={994525504055033946:'bs',994525508215771186:'coc',994525497620959323:'cr',994525499835564042:'mc'}
-		linkserver=await self.bot.get_guild(self.servers[0])
+		linkserver=self.bot.get_guild(self.servers[0])
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
@@ -78,7 +78,7 @@ class AutoResponse(commands.Cog):
 
 	@commands.Cog.listener()
 	async def on_raw_reaction_remove(self,payload):
-		linkserver=await self.bot.get_guild(self.servers[0])
+		linkserver=self.bot.get_guild(self.servers[0])
 		role_emote={994525504055033946:'bs',994525508215771186:'coc',994525497620959323:'cr',994525499835564042:'mc'}
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
