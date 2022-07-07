@@ -20,8 +20,11 @@ import autores
 
 #important variables
 op_discord_id=['557914347490508806','709740580988780624']
+global servers
 servers=[691292302580121690]
+global resource_server
 resource_server=[887015707366277170]
+
 
 def check_op(uid):
 	print(uid)
