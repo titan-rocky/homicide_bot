@@ -10,6 +10,8 @@ class AutoResponse(commands.Cog):
 		self.map_chid=769188270247510067
 		self.meme_chid=816180444227436574
 		self.art_chid=992054563064533075
+		self.selfrole_chid==994495593856651334
+		self.homi_roledict=={'bs':992616272640618526,'coc':992616363971596370,'cr':992616443361378304,'mc':992616012841222144}
 
 
 	@commands.Cog.listener()
@@ -62,4 +64,23 @@ class AutoResponse(commands.Cog):
 					await message.add_reaction(em3)
 			else:
 				await message.delete()	
+			
+	@commands.Cog.listener()
+	async def on_raw_reaction_add(self,payload):
+		role_emote={994510214109859860:'bs',994510217716961380:'coc',994510643677900810:'cr',994510207390580757:'mc'}
+		if payload.channel_id==self.selfrole_chid:
+			for i in role_emote:
+				if payload.emoji.id==i:
+					payload.member.add_role(homi_roledict[role_emote[i]])
+
+	@commands.Cog.listener()
+	async def on_raw_reaction_remove(self,payload):
+		role_emote={994510214109859860:'bs',994510217716961380:'coc',994510643677900810:'cr',994510207390580757:'mc'}
+		if payload.channel_id==self.selfrole_chid:
+			for i in role_emote:
+				if payload.emoji.id==i:
+					payload.member.remove_role(homi_roledict[role_emote[i]])
+
+	
+
 
