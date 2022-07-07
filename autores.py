@@ -81,7 +81,7 @@ class AutoResponse(commands.Cog):
 		linkserver=self.bot.get_guild(self.servers[0])
 		print(payload.user_id)
 		role_emote={994525504055033946:'bs',994525508215771186:'coc',994525497620959323:'cr',994525499835564042:'mc'}
-		user_ev=payload.guild.get_user(payload.user_id)
+		user_ev=payload.guild.get_member(payload.user_id)
 		if payload.channel_id==self.selfrole_chid and not(user_ev.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
