@@ -84,7 +84,7 @@ class AutoResponse(commands.Cog):
 		if payload.channel_id==self.selfrole_chid and not(payload.member.bot):
 			for i in role_emote:
 				if payload.emoji.id==i:
-					await payload.member.remove_roles(linkserver.get_role(self.homi_roledict[role_emote[i]]))
+					await self.bot.get_user(payload.user_id).remove_roles(linkserver.get_role(self.homi_roledict[role_emote[i]]))
 
 	
 
