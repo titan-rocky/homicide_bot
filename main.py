@@ -68,6 +68,8 @@ async def on_ready():
 	print('I am Ready')
 	await cl.change_presence(status=discord.Status.idle,activity=discord.Game(name="Shockers with Positive Feedback",assets={'large_image_url':'https://cdn.discordapp.com/attachments/737942309173329985/886997742252081212/PicsArt_09-11-10.29.55.jpg','large_text':'sdghsdh'}))
 	#temporary input space
+	'''
+	#Self role embed
 	embed_m1_desc='Select the roles of Games you play , so that ya will be pinged regarding events and other info'
 	embed_m1=discord.Embed(color=0x03ecfc,title="Game Roles",description=embed_m1_desc)
 	embed_m1.set_author(name='🥇Self Roles')
@@ -79,7 +81,7 @@ async def on_ready():
 	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994525508215771186))
 	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994525497620959323))
 	await m1b.add_reaction(await cl.get_guild(servers[0]).fetch_emoji(994525499835564042))
-
+	'''
 
 	#temp ends
 	gud_mor.start()
