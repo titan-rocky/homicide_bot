@@ -65,6 +65,15 @@ async def gud_mor():
 async def on_ready():
 	print('I am Ready')
 	await cl.change_presence(status=discord.Status.idle,activity=discord.Game(name="Shockers with Positive Feedback",assets={'large_image_url':'https://cdn.discordapp.com/attachments/737942309173329985/886997742252081212/PicsArt_09-11-10.29.55.jpg','large_text':'sdghsdh'}))
+	#temporary input space
+	embed_m1_desc='Select the roles of Games you play , so that ya will be pinged regarding events and other info'
+	embed_m1=discord.Embed(color=0x03ecfc,title="Game Roles")
+	embed_m1.set_author(name='🥇Self Roles')
+	embed_m1.add_field(name=f'Added Game Roles : ',value='<:bs:994510214109859860> : <@&992616272640618526>/n<:coc:994510217716961380> : <@&992616363971596370>/n<:cr:994510643677900810> : <@&992616443361378304>/n<:mc:994510207390580757> : <@&992616012841222144>/n',inline=True)
+	embed_m1.set_footer(text=f'Please select the roles with consent , don\'t report for pinging later')
+	embed_m1.set_thumbnail(url='https://cdn.discordapp.com/attachments/737942309173329985/994507718700322966/pngwing.com.png')
+
+	#temp ends
 	gud_mor.start()
 
 	#(status=discord.Status.idle,activity=discord.Streaming(name="Leagen Returns",platform='twitch',url='https://www.twitch.tv/titan_rocky',details='Leagen Returns',assets={'large_image':'877557270177808394','large_text':'sdghsdh'}))
